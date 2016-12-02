@@ -1,0 +1,23 @@
+\begin{thebibliography}{5}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abramowicz} {et~al.}(1978){Abramowicz}, {Jaroszynski}, \&
+  {Sikora}}]{Abramowicz:1978}
+{Abramowicz}, M., {Jaroszynski}, M., \& {Sikora}, M. 1978, \aap, 63, 221
+
+\bibitem[{{Jaroszynski} {et~al.}(1980){Jaroszynski}, {Abramowicz}, \&
+  {Paczynski}}]{Jaroszynski:1980}
+{Jaroszynski}, M., {Abramowicz}, M.~A., \& {Paczynski}, B. 1980, \actaa, 30, 1
+
+\bibitem[{{Komissarov}(2006)}]{Komissarov:2006}
+{Komissarov}, S.~S. 2006, \mnras, 368, 993
+
+\bibitem[{{Qian} {et~al.}(2009){Qian}, {Abramowicz}, {Fragile}, {Hor{\'a}k},
+  {Machida}, \& {Straub}}]{Qian:2009}
+{Qian}, L., {Abramowicz}, M.~A., {Fragile}, P.~C., {et~al.} 2009, \aap, 498,
+  471
+
+\bibitem[{{von Zeipel}(1924)}]{vonZeipel1924}
+{von Zeipel}, H. 1924, \mnras, 84, 665
+
+\end{thebibliography}
