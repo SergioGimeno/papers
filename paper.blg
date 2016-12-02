@@ -3,47 +3,45 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: paper.aux
 The style file: bibtex/aa.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "Zanotti2015"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 5 entries,
+You've used 6 entries,
             3039 wiz_defined-function locations,
-            707 strings with 5537 characters,
-and the built_in function-call counts, 2142 in all, are:
-= -- 181
-> -- 140
-< -- 2
-+ -- 47
-- -- 42
-* -- 172
-:= -- 407
-add.period$ -- 5
-call.type$ -- 5
-change.case$ -- 34
-chr.to.int$ -- 5
-cite$ -- 5
-duplicate$ -- 90
-empty$ -- 129
-format.name$ -- 52
-if$ -- 418
+            714 strings with 5701 characters,
+and the built_in function-call counts, 2537 in all, are:
+= -- 217
+> -- 162
+< -- 3
++ -- 54
+- -- 48
+* -- 201
+:= -- 479
+add.period$ -- 6
+call.type$ -- 6
+change.case$ -- 40
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 109
+empty$ -- 154
+format.name$ -- 63
+if$ -- 497
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 5
-newline$ -- 19
-num.names$ -- 20
-pop$ -- 34
+missing$ -- 6
+newline$ -- 22
+num.names$ -- 24
+pop$ -- 40
 preamble$ -- 1
-purify$ -- 34
+purify$ -- 40
 quote$ -- 0
-skip$ -- 76
+skip$ -- 93
 stack$ -- 0
-substring$ -- 99
+substring$ -- 117
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 45
+type$ -- 54
 warning$ -- 0
-while$ -- 20
+while$ -- 24
 width$ -- 0
-write$ -- 53
-(There was 1 warning)
+write$ -- 63

@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abramowicz} {et~al.}(1978){Abramowicz}, {Jaroszynski}, \&
@@ -17,7 +17,11 @@
 {Qian}, L., {Abramowicz}, M.~A., {Fragile}, P.~C., {et~al.} 2009, \aap, 498,
   471
 
-\bibitem[{{von Zeipel}(1924)}]{vonZeipel1924}
+\bibitem[{{von Zeipel}(1924)}]{vonZeipel:1924}
 {von Zeipel}, H. 1924, \mnras, 84, 665
+
+\bibitem[{{Zanotti} \& {Pugliese}(2015)}]{Zanotti:2015}
+{Zanotti}, O. \& {Pugliese}, D. 2015, General Relativity and Gravitation, 47,
+  44
 
 \end{thebibliography}

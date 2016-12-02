@@ -114,11 +114,11 @@ l (r,\theta) = \left\{ \label{eq:ansatz}
   \end{array}
 \right\}.
 \end{equation}
-where $r_{\mathrm{ms}}$ is the radius of the marginally stable circular orbit(INTRODUCIR RMS, RMB Y CUSP ANTES. Introduccion?), the constants $l_0$ and $l_{\mathrm{ms}}(r)$ are defined by $l_0 \equiv \eta l_{\mathrm{K}}(r_{\mathrm{ms}})$ and $l_{\mathrm{ms}}(r) \equiv l_0 [l_{\mathrm{K}}(r_{\mathrm{ms}})/l_0]^{\beta}$. It can be seen that the model for the distribution of angular momentum has three parameters $(\beta, \gamma, \eta)$
+where $r_{\mathrm{ms}}$ is the radius of the marginally stable circular orbit [Creo que seria mejor introducir el cusp, rmb y rms en la introduccion de alguna forma...], the constants $l_0$ and $l_{\mathrm{ms}}(r)$ are defined by $l_0 \equiv \eta l_{\mathrm{K}}(r_{\mathrm{ms}})$ and $l_{\mathrm{ms}}(r) \equiv l_0 [l_{\mathrm{K}}(r_{\mathrm{ms}})/l_0]^{\beta}$. It can be seen that the model for the distribution of angular momentum has three parameters $(\beta, \gamma, \eta)$
 \begin{equation}
 0 \leq \beta \leq 1, \quad -1 \leq \gamma \leq 1, \quad 1 \leq \eta \leq \eta_{\mathrm{max}},
 \end{equation}
-with $\eta_{\mathrm{max}} = l_{\mathrm{K}}(r_{\mathrm{mb}})/l_{\mathrm{K}}(r_{\mathrm{ms}})$. In this paper we chose $\eta = \eta_{\mathrm{max}}$, then we can write $l_0$ as $l_0 = l_{\mathrm{K}}(r_{\mathrm{mb}})$. We take this choice because (l comprendido entre lms y lmb para los valores de beta. Discos que comienzan en el cusp no tienen borde exterior para l = lmb.)
+with $\eta_{\mathrm{max}} = l_{\mathrm{K}}(r_{\mathrm{mb}})/l_{\mathrm{K}}(r_{\mathrm{ms}})$. In this paper we chose $\eta = \eta_{\mathrm{max}}$, then we can write $l_0$ as $l_0 = l_{\mathrm{K}}(r_{\mathrm{mb}})$. We take this choice because [explicar que esta eleccion hace que el momento angular esté comprendido entre lmb y lms para variaciones de beta entre 0 y 1. Además los discos de momento angular constante que empiezan en el cusp, no tienen borde externo para l = lmb]
 
 \subsection{Magnetized disks}
 
@@ -174,7 +174,7 @@ p_{\mathrm{m}} = K_{\mathrm{m}} \mathcal{L}^{\eta-1} w^{\eta},
 \end{equation}
 where $K_{\mathrm{m}}$ and $\eta$ are constants.
 
-This particular choice of relationships $w = w(p)$ and $\tilde{w} = \tilde{w}(\tilde{p}_{\mathrm{m}})$, fulfill the general relativistic version for a toroidal magnetic field of the von Zeipel theorem \citep{vonZeipel1924, Zanotti2015}, that means the surfaces of $\Omega$ and $l$ constant coincide.
+This particular choice of relationships $w = w(p)$ and $\tilde{w} = \tilde{w}(\tilde{p}_{\mathrm{m}})$, fulfill the general relativistic version for a toroidal magnetic field of the von Zeipel theorem \citep{vonZeipel:1924, Zanotti:2015}, that means the surfaces of $\Omega$ and $l$ constant coincide.
 
 We can rewrite equation \eqref{eq:diff_ver} and integrate it to give
 \begin{equation}\label{eq:pre_full_int}
@@ -206,6 +206,12 @@ W - W_{\rm{in}} + \frac{\kappa}{\kappa - 1} K w^{\kappa - 1} + \frac{\eta}{\eta 
 \end{equation}
 which relates the distribution of potential with the distribution of enthalpy.
 
+Finally, we assume a polytropic equation of state given by
+\begin{equation}\label{eq:density_eq}
+p = K \rho^{\kappa}
+\end{equation}
+where $\rho$ is the fluid density.
+
 %--------------------------------------------------------------------
 \section{Methodology}
 
@@ -235,28 +241,36 @@ which is an ordinary differential equation that can be integrated to obtain the 
 Next, we choose all the initial values for the integration of the equation \eqref{eq:F} to be between $r_{\mathrm{cusp}}$ and $r_{\mathrm{c}}$ ($\theta = \pi / 2$). Since we are only interested in the surfaces inside the Roche lobe, our choice of initial values provides us a mapping of the equipotential surfaces of the torus. Given that we have already obtained both the equipotential surfaces which cross the segment $[r_{\mathrm{cusp}}, r_{\mathrm{c}}]$ and the potential distribution there, we found the potential distribution for the torus.
 Once we have the potential distribution, we can find the gas pressure at the center, from equation \eqref{eq:enthalpy_eq}
 \begin{equation}
-p_{\mathrm{c}} = w_{\mathrm{c}}(W_{\mathrm{in}} - W_{\mathrm{c}})\left(\frac{\kappa}{\kappa - 1} + \frac{\eta}{\eta - 1}\frac{1}{\beta_c}\right)^{-1},
+p_{\mathrm{c}} = w_{\mathrm{c}}(W_{\mathrm{in}} - W_{\mathrm{c}})\left(\frac{\kappa}{\kappa - 1} + \frac{\eta}{\eta - 1}\frac{1}{\beta_{\mathrm{c}}}\right)^{-1},
 \end{equation}
+where $w_{\mathrm{m}}$ is the enthalpy at the disk center and
+\begin{equation}\label{eq:beta_eq}
+\beta = p/p_{\mathrm{m}},
+\end{equation}
+is the magnetization parameter (being $\beta_{\mathrm{m}}$ the magnetization parameter at the disk center). By this definition, we can find the magnetic pressure at the disk center,
+\begin{equation}
+p_{\mathrm{m_{\mathrm{c}}}} = p_{\mathrm{c}}/\beta_{\mathrm{c}}
+\end{equation}
+With the pressures at the center, we can also find the constants $K$ and $K_{\mathrm{m}}$ using the equations \eqref{eq:eos_fluid} and \eqref{eq:eos_mag}. And, for a given inner radius of the disk $r_{\mathrm{in}}$ we can find the potential $W_{\mathrm{in}}$. We now have all the elements required to find the enthalpy distribution (equation \eqref{eq:enthalpy_eq}), the pressure and magnetic pressure distribution (equations \eqref{eq:eos_fluid} and \eqref{eq:eos_mag}), and the density (equation \eqref{eq:density_eq}).
 
 \subsection{Numerical code}
 
-- Description of the numerical construction. 
+For the integration of equation \eqref{eq:equatorial_pot} we use the composite Simpson's rule, it is important to use a very small step of integration, because the slope is very steep. In this work, we use a step $h = 10^{-6}$ [tengo que revisar esto en el codigo]. A bigger step gives an unacceptable lack of accuracy, we tested that fact by comparison with the analytic, constant angular momentum case.
+
+To integrate the ordinary differential equation \eqref{eq:F} we use the RK4 method. Here is also important to choose a suitable step of integration, specially at the outer end of the disk, this is because the equation \eqref{eq:F} diverges of the equatorial plane (the equipotential surfaces crosses the equatorial plane perpendicularly). 
 
 \subsection{Parameter space}
 
-Parameters $\beta$, $\gamma$, $\eta$, $\beta_{\rm{mag}}$, $\kappa$, $\eta$, $r_{\rm{in}}$ and $a$. We do not vary $\kappa$ and $\eta$. And take $\eta = \eta_{max}$ for each value of $a$
+As in \citet{Komissarov:2006}, in this paper we have chosen the exponents $\kappa = \eta = 4/3$ and the enthalpy at the disk center $w_{\mathrm{c}} = 0$. That leaves us the magnetization parameter $\beta$, the parameters of the angular momentum distribution $\beta$ and $\gamma$, the BH spin parameter $a$ and the inner radius of the disk $r_{\mathrm{in}}$. This allows us to control the size, shape, thickness and magnetization of the disk.
 
 %--------------------------------------------------------------------
 \section{Results}
 
 \begin{figure*}
 \centering
-\includegraphics[scale=0.4]{1.pdf}
-\includegraphics[scale=0.4]{2.pdf}
-\caption{Adiabatic exponent $\Gamma_1$.
-            $\Gamma_1$ is plotted as a function of
-            $\lg$ internal energy $\mathrm{[erg\,g^{-1}]}$ and $\lg$
-            density $\mathrm{[g\,cm^{-3}]}$.}
+\includegraphics[scale=0.4]{images/1.pdf}
+\includegraphics[scale=0.4]{images/2.pdf}
+\caption{density plots}
            \label{FigGam}%
  \end{figure*}
 
