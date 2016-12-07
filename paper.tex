@@ -255,9 +255,9 @@ With the pressures at the center, we can also find the constants $K$ and $K_{\ma
 
 \subsection{Numerical code}
 
-For the integration of equation \eqref{eq:equatorial_pot} we use the composite Simpson's rule, it is important to use a very small step of integration, because the slope is very steep. In this work, we use a step $h = 10^{-6}$ [tengo que revisar esto en el codigo]. A bigger step gives an unacceptable lack of accuracy, we tested that fact by comparison with the analytic, constant angular momentum case.
+For the integration of equation \eqref{eq:equatorial_pot} we use the composite Simpson's rule, it is important to use a very small step of integration, because the slope is very steep. In this work, we use a step $h = 10^{-6}$ . A bigger step gives an unacceptable lack of accuracy, we tested that fact by comparison with the analytic, constant angular momentum case.
 
-To integrate the ordinary differential equation \eqref{eq:F} we use the RK4 method. Here is also important to choose a suitable step of integration, specially at the outer end of the disk, this is because the equation \eqref{eq:F} diverges of the equatorial plane (the equipotential surfaces crosses the equatorial plane perpendicularly). 
+To integrate the ordinary differential equation \eqref{eq:F} we use the RK4 method. Here is also important to choose a suitable step of integration, specially at the outer end of the disk, this is because the equation \eqref{eq:F} diverges of the equatorial plane (the equipotential surfaces crosses the equatorial plane perpendicularly).
 
 \subsection{Parameter space}
 
@@ -270,9 +270,29 @@ As in \citet{Komissarov:2006}, in this paper we have chosen the exponents $\kapp
 \centering
 \includegraphics[scale=0.4]{images/1.pdf}
 \includegraphics[scale=0.4]{images/2.pdf}
-\caption{density plots}
+\caption{test density plots}
            \label{FigGam}%
  \end{figure*}
+
+\begin{table*}
+\caption{test two column table}             
+\label{table:1}      
+\centering          
+\begin{tabular}{c c c c c c c c c c}
+\hline\hline       
+                      
+Modelo & $\beta$ & $\gamma$ & $\beta_{\mathrm{c}}$ & $\Delta W$ & $r_{\mathrm{in}}$ & $r_{\mathrm{out}}$ & $r_{p_{\rm{max}}}$ & $r_{p_{\mathrm{mag, max}}}$ & $p_{\mathrm{max}}$\\ 
+\hline                    
+  B-7 & $0.5$ & $0.5$ & $10^{3}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.971$ & $2.086$ & $1.83 \times 10^{-2}$\\ 
+  B-8 & $0.5$ & $0.5$ & $10^{2}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.971$ & $2.076$ & $1.82 \times 10^{-2}$\\ 
+  B-9 & $0.5$ & $0.5$ & $1$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.931$ & $2.047$ & $1.68 \times 10^{-2}$\\ 
+  B-10 & $0.5$ & $0.5$ & $1$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.761$ & $1.861$ & $1.10 \times 10^{-2}$\\ 
+  B-11 & $0.5$ & $0.5$ & $10^{-1}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.641$ & $1.701$ & $2.95 \times 10^{-3}$\\ 
+  B-12 & $0.5$ & $0.5$ & $10^{-2}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.621$ & $1.681$ & $3.59 \times 10^{-4}$\\ 
+  B-13 & $0.5$ & $0.5$ & $10^{-3}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.611$ & $1.671$ & $3.67 \times 10^{-5}$\\ 
+\hline                  
+\end{tabular}
+\end{table*}
 
 
 %--------------------------------------------------------------------
