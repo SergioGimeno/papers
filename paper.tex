@@ -24,24 +24,20 @@
 % To add links in your PDF file, use the package "hyperref"
 % with options according to your LaTeX or PDFLaTeX drivers.
 %
+
 \begin{document} 
 
-
-   \title{Magnetized Polish doughnuts}
+\title{Magnetized Polish doughnuts revisited}
 
 %   \subtitle{}
 
-   \author{Gimeno
-          \inst{1}
-          \and
-          Font\inst{1,2}
-          }
+   \author{Sergio Gimeno\inst{1}   \and Jos\'e A.~Font\inst{1,2} }
 
-   \institute{DAA\\
-              \email{wuchterl@amok.ast.univie.ac.at}
+   \institute{Departamento de Astronom\'{\i}a y Astrof\'{\i}sica, Universitat de Val\`encia, Dr. Moliner 50, 46100, Burjassot (Val\`encia), Spain.\\
+              \email{sergiso@alumni.uv.es}
          \and
-             OAUV \\
-             \email{c.ptolemy@hipparch.uheaven.space}
+             Observatori Astron\`omic, Universitat de Val\`encia, C/ Catedr\'atico Jos\'e Beltr\'an 2, 46980, Paterna (Val\`encia), Spain. \\
+             \email{j.antonio.font@uv.es}
              }
 
    \date{}
@@ -62,95 +58,128 @@
   % conclusions heading (optional), leave it empty if necessary 
    {}
 
-   \keywords{keywords here
-               }
+   \keywords{keywords here}
 
    \maketitle
-%
-%-------------------------------------------------------------------
 
+%%%%%%%%%%%
 \section{Introduction}
+%%%%%%%%%%%
+
+% From Qian et al: 
+% We construct a new family of analytic models of black hole accretion disks in dynamical equilibria. 
+% Our construction is based on assuming distributions of angular momentum and entropy. For a 
+% particular choice of the distribution of angular momentum, we calculate the shapes of equipressure 
+% surfaces. The equipressure surfaces we find are similar to those in thick, slim and thin disks, and
+% to those in ADAFs.
+% Models of tori described here may be useful not only for accretion% disks but also for tori that formin the latest stages of neutron% star binary mergers. This is relevant for gamma ray bursts (Witt% et al. 1994) and gravitational waves (Baiotti et al. 2008).
+
+% From Komissarov:
+% The dynamics of accretion discs around galactic and extragalactic black holes may be influenced
+% by their magnetic field. In this paper, we generalize the fully relativistic theory of% stationary axisymmetric tori in Kerr metric of Abramowicz, Jaroszynski&Sikora by including% strong toroidal magnetic field and construct analytic solutions for barotropic tori with constant% angular momentum. This development is particularly important for the general relativistic% computational magnetohydrodynamics that suffers from the lack of exact analytic solutions% that are needed to test computer codes.
 
 
-\citet{Qian:2009} presented a method to build sequences of black hole accretion disks in dynamical equilibria based on
-assuming distributions of angular momentum in the disks. Building on this work, we present here the extension of those
-models to disks endowed with a purely toroidal magnetic field. For the particular case of constant angular momentum
-distributions our method shows good agreement with the results of~\citet{Komissarov:2006}.
 
-In this paper, we consider that the space-time is described by the Kerr metric (test-fluid approximation). We use the geometrized units where $G = c = 1$ and the $(-+++)$ signature for the metric.
+Matter accretion on to a black hole is the most efficient form of energy production known in nature. The conversion of the
+gravitational energy of the infalling matter into heat and radiation may reach efficiencies
+of about 43\% in the case of rotating (Kerr) black holes. For this reason, systems formed 
+by a black hole surrounded by an accretion disk are deemed responsible for many of the most energetic astronomical phenomena observed in the cosmos.
+In particular, (geometrically) thick accretion disks are believed to be present in quasars and other active galactic nuclei, some 
+X-ray binaries and microquasars, as well as in the central engine of gamma-ray bursts.
 
-%--------------------------------------------------------------------
+The investigation of such systems, either by analytical or numerical means, may rely on the ability to construct suitable 
+representations based on physical assumptions. The construction of equilibrium models of stationary disks around black holes has a long tradition (see~\cite{Abramowicz:2013} and references therein). In particular, the so-called ``Polish doughnuts", developed by Paczy\'nski and collaborators~\citep{Abramowicz:1978}, provides a  very general method to build equilibrium configurations of perfect fluid matter  
+ orbiting around a Kerr black hole. This fully relativistic model assumes that the disk is non-magnetized and that the matter obeys a  constant specific angular momentum distribution. \cite{Komissarov:2006} extended this method by adding a purely azimuthal magnetic 
+ field to build magnetized tori around rotating black holes. Assuming different distributions of angular momentum in the disks, \citet{Qian:2009} presented a method to build sequences of black hole thick accretion disks in dynamical equilibria, restricted to the purely hydrodynamical case. Building on this work, we discuss here the extension of the
+models of~\citet{Qian:2009} to disks endowed with a purely toroidal magnetic field. For the particular case of constant angular momentum distributions our method shows good agreement with the results of~\citet{Komissarov:2006}.
+
+The organization of the paper is as follows:
+We assume that the test-fluid approximation holds, neglecting the self-gravity of the fluid, and assume that the space-time is described by the Kerr metric. We use geometrized units where $G = c = 1$.
+
+%%%%%%%%%%%
 \section{Framework}
+%%%%%%%%%%%
 
+Equilibrium tori around Kerr black holes are built assuming that the spacetime gravitational potentials and the fluid fields are stationary and axisymmetric. In all the derivations presented below, the Kerr metric is implicitely written using standard Boyer-Lindquist coordinates. It is convenient to introduce a number of relevant characteristic radii, such as the radius
+of the marginally stable circular orbit, $r_{\rm ms}$, and the radius of the marginally bound circular orbit, $r_{\rm mb}$, given by
+\begin{eqnarray}
+r_{\rm ms} &=& M\,\left(3+Z_2-\left[(3-Z_1)(3+Z_1+2Z_2)\right]^{1/2})\right)\,,
+\\
+r_{\rm mb} &=& 2M\,\left(  1-\frac{a_*}{2} + \sqrt{1-a_*} \right)\,,
+\end{eqnarray}
+where $Z_1=1+(1-a_*^2)^{1/3}[(1+a_*)^{1/3}+(1-a_*)^{1/3}]$, $Z_2=(3a_*^2+Z_1^2)^{1/2}$, and $a_*=a/M$, with $a$ and $M$ being the spin Kerr parameter and the black hole mass.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Distribution of angular momentum}
-First, we introduce the specific angular momentum $l$ and the angular velocity $\Omega$ by the standard definitions,
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+We introduce the specific angular momentum $l$ and the angular velocity $\Omega$ employing the standard definitions,
 \begin{equation}
 l = - \frac{u_{\phi}}{u_t}, \;\;\; \Omega = \frac{u^{\phi}}{u^t},
 \end{equation}
-where $u^{\mu}$ is the fluid four-velocity and $g_{\mu\nu}$ is the metric tensor\footnote{In Kerr-Schild coordinates. Although the use of the Boyer-Lindquist coordinates yields exactly the same mathematical derivation and results.}.
-
+where $u^{\mu}$ is the fluid four-velocity.
+%
+%\footnote{In Kerr-Schild coordinates. Although the use of the Boyer-Lindquist coordinates yields exactly the same mathematical derivation and results.}.
+%
 The relationship between $l$ and $\Omega$ is given by the equations
 \begin{equation}
 l = - \frac{\Omega g_{\phi\phi} + g_{t\phi}}{\Omega g_{t\phi} + g_{tt}}, \;\;\; \Omega = - \frac{l g_{tt} + g_{t\phi}}{l g_{t\phi} + g_{\phi\phi}},
 \end{equation}
-where we are assuming circular motion, i.e. the four-velocity can be written as
+where $g_{\mu\nu}$ is the metric tensor and we are assuming circular motion, i.e. the four-velocity can be written as
 \begin{equation}
-u^{\mu} = (u^t, 0, 0, u^{\phi}),
+u^{\mu} = (u^t, 0, 0, u^{\phi})\,.
 \end{equation}
-we also introduce the Keplerian angular momentum (for prograde motion) in the equatorial plane $l_{\mathrm{K}}$. 
+We also introduce the Keplerian angular momentum (for prograde motion) in the equatorial plane $l_{\mathrm{K}}$. 
 \begin{equation}\label{eq:kepler}
-l_{\mathrm{K}}(r) = \frac{M^{1/2}(r^{2}-2aM^{1/2}r^{1/2}+a^{2})}{r^{3/2}-2Mr^{1/2}+aM^{1/2}},
+l_{\mathrm{K}}(r) = \frac{M^{1/2}(r^{2}-2aM^{1/2}r^{1/2}+a^{2})}{r^{3/2}-2Mr^{1/2}+aM^{1/2}}\,.
 \end{equation}
-In \citet{Jaroszynski:1980} is argued that the slope of the specific angular momentum should be between two cases: $l = \mathrm{const.}$ and $\Omega = \mathrm{const.}$. 
 
-%simulaciones?
-
-We assume the angular momentum distribution proposed by \citet{Qian:2009} 
+\cite{Jaroszynski:1980} argued that the slope of the specific angular momentum should range between two cases, $l = \mathrm{const.}$ and $\Omega = \mathrm{const}$. Following \citet{Qian:2009} we assume an angular momentum distribution ansatz given by  
 \begin{equation}
 l (r,\theta) = \left\{ \label{eq:ansatz} 
   \begin{array}{lr}
     l_0 \left(\frac{l_{\mathrm{K}}(r)}{l_0}\right)^{\beta}\sin^{2\gamma}{\theta} &  \text{for } r \geq r_{\mathrm{ms}}\\
     l_{\mathrm{ms}}(r)\sin^{2\gamma}{\theta} & \text{for } r < r_{\mathrm{ms}}
   \end{array}
-\right\}.
+\right.
 \end{equation}
-where $r_{\mathrm{ms}}$ is the radius of the marginally stable circular orbit [Creo que seria mejor introducir el cusp, rmb y rms en la introduccion de alguna forma...], the constants $l_0$ and $l_{\mathrm{ms}}(r)$ are defined by $l_0 \equiv \eta l_{\mathrm{K}}(r_{\mathrm{ms}})$ and $l_{\mathrm{ms}}(r) \equiv l_0 [l_{\mathrm{K}}(r_{\mathrm{ms}})/l_0]^{\beta}$. It can be seen that the model for the distribution of angular momentum has three parameters $(\beta, \gamma, \eta)$
+where constants $l_0$ and $l_{\mathrm{ms}}(r)$ are defined by $l_0 \equiv \eta l_{\mathrm{K}}(r_{\mathrm{ms}})$ and $l_{\mathrm{ms}}(r) \equiv l_0 [l_{\mathrm{K}}(r_{\mathrm{ms}})/l_0]^{\beta}$. Therefore, the model for the distribution of angular momentum has three parameters $(\beta, \gamma, \eta)$, whose range of variation is given by~\citep{Qian:2009}
 \begin{equation}
 0 \leq \beta \leq 1, \quad -1 \leq \gamma \leq 1, \quad 1 \leq \eta \leq \eta_{\mathrm{max}},
 \end{equation}
-with $\eta_{\mathrm{max}} = l_{\mathrm{K}}(r_{\mathrm{mb}})/l_{\mathrm{K}}(r_{\mathrm{ms}})$. In this paper we chose $\eta = \eta_{\mathrm{max}}$, then we can write $l_0$ as $l_0 = l_{\mathrm{K}}(r_{\mathrm{mb}})$. We take this choice because [explicar que esta eleccion hace que el momento angular esté comprendido entre lmb y lms para variaciones de beta entre 0 y 1. Además los discos de momento angular constante que empiezan en el cusp, no tienen borde externo para l = lmb]
+with $\eta_{\mathrm{max}} = l_{\mathrm{K}}(r_{\mathrm{mb}})/l_{\mathrm{K}}(r_{\mathrm{ms}})$. In this paper we choose $\eta = \eta_{\mathrm{max}}$, then we can write $l_0$ as $l_0 = l_{\mathrm{K}}(r_{\mathrm{mb}})$. We take this choice because [explicar que esta eleccion hace que el momento angular esté comprendido entre lmb y lms para variaciones de beta entre 0 y 1. Además los discos de momento angular constante que empiezan en el cusp, no tienen borde externo para l = lmb]
 
+%%%%%%%%%%%%%%%%
 \subsection{Magnetized disks}
+%%%%%%%%%%%%%%%%
 
-The equations of ideal GRMHD are
-\begin{equation}\label{eq:e-m_cons}
-\nabla_{\mu} T^{\mu\nu} = 0,
-\end{equation}
-\begin{equation}\label{eq:cons_faraday}
-\nabla_{\mu} \ast F^{\mu\nu} = 0,
-\end{equation}
-\begin{equation}\label{eq:continuity}
-\nabla_{\mu} (\rho u^{\mu}) = 0,
-\end{equation}
-where
+The equations of ideal general relativistic MHD are $\nabla_{\mu} T^{\mu\nu} = 0$, $\nabla_{\mu} \,^\ast F^{\mu\nu} = 0$, and 
+$\nabla_{\mu} (\rho u^{\mu}) = 0$, 
+%\begin{equation}\label{eq:e-m_cons}
+%\nabla_{\mu} T^{\mu\nu} = 0,
+%\end{equation}
+%\begin{equation}\label{eq:cons_faraday}
+%\nabla_{\mu} \ast F^{\mu\nu} = 0,
+%\end{equation}
+%\begin{equation}\label{eq:continuity}
+%\nabla_{\mu} (\rho u^{\mu}) = 0,
+%\end{equation}
+where $\nabla_{\mu}$ is the covariant derivative and
 \begin{equation}\label{eq:e-m_tensor}
 T^{\mu\nu} = (w + b^2)u^{\mu}u^{\nu} + \left(p + \frac{1}{2}b^2\right)g^{\mu\nu} - b^{\mu}b^{\nu},
 \end{equation}
-is the energy-momentum tensor taking into account only the fluid and the Maxwell parts, $w$ and $p$ are the fluid enthalpy and pressure, respectively. And
-\begin{equation}
-\ast F^{\mu\nu} = b^{\mu}u^{\nu} - b^{\nu}u^{\mu},
-\end{equation}
-is the Faraday tensor relative to an observer with four-velocity $u^{\mu}$ and $b^{\mu}$ is the magnetic field in that frame.
-Assuming the magnetic field is purely azimuthal
-\begin{equation}
-b^r = b^{\theta} = 0,
-\end{equation}
-and taking into account that the flow is stationary and axisymmetric, we can see that \eqref{eq:continuity} is always satisfied. The same happens with \eqref{eq:cons_faraday}. Contracting the equation \eqref{eq:e-m_tensor} with the projection tensor $h^{\alpha}_{\beta} = \delta^{\alpha}_{\beta} + u^{\alpha}u_{\beta}$, we arrive at
+is the energy-momentum tensor of a magnetized perfect fluid, $w$ and $p$ being the fluid enthalpy and pressure, respectively. 
+Moreover,
+%\begin{equation}
+$^\ast F^{\mu\nu} = b^{\mu}u^{\nu} - b^{\nu}u^{\mu}$
+%\end{equation}
+is the (dual of the) Faraday tensor relative to an observer with four-velocity $u^{\mu}$, and $b^{\mu}$ is the magnetic field in that frame.
+Assuming the magnetic field is purely azimuthal, i.e.~$b^r = b^{\theta} = 0$,
+and taking into account that the flow is stationary and axisymmetric, the conservation of the current density and of the Faraday tensor follow. Contracting Eq.~\eqref{eq:e-m_tensor} with the projection tensor $h^{\alpha}_{\beta} = \delta^{\alpha}_{\beta} + u^{\alpha}u_{\beta}$, we arrive at
 \begin{equation}
 (w + b^2)u_{\nu}\partial_i u^{\nu} + \partial_i\left(p + \frac{b^2}{2}\right) - b_{\nu}\partial_i b^{\nu},
 \end{equation}
-where the comma denotes partial derivatives and $i = r, \theta$. We can rewrite this equation in terms of the specific angular momentum $l$ and the angular velocity $\Omega$, to obtain
-
+where $i = r, \theta$. We can rewrite this equation in terms of the specific angular momentum $l$ and the angular velocity $\Omega$, to obtain
 \begin{equation}\label{eq:diff_ver}
 \partial_i(\ln u_t|) - \frac{\Omega \partial_i l}{1-l\Omega} + \frac{\partial_i p}{w} + \frac{\partial_i(\mathcal{L}b^2)}{2\mathcal{L}w} = 0,
 \end{equation}
@@ -158,7 +187,7 @@ where
 \begin{equation}
 \mathcal{L} = g_{t\phi}^2 - g_{tt}g_{\phi\phi}.
 \end{equation}
-To integrate the equation \eqref{eq:diff_ver} first we assume a barotropic equation of state $w = w(p)$ of the form
+To integrate Eq.~\eqref{eq:diff_ver} we first assume a barotropic equation of state $w = w(p)$ of the form
 \begin{equation}\label{eq:eos_fluid}
 p = K w^{\kappa},
 \end{equation}
@@ -339,7 +368,7 @@ Modelo & $\beta$ & $\gamma$ & $\beta_{\mathrm{c}}$ & $\Delta W$ & $r_{\mathrm{in
 
 
 \begin{acknowledgements}
-      Bla, bla, bla.
+      Work supported by the Spanish MINECO (grants AYA2013-40979-P and AYA2015-66899-C2-1-P) and the Generalitat Valenciana (PROMETEOII-2014-069).
 \end{acknowledgements}
 
 % WARNING
