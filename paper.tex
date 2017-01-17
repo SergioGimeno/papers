@@ -72,11 +72,19 @@
 % particular choice of the distribution of angular momentum, we calculate the shapes of equipressure 
 % surfaces. The equipressure surfaces we find are similar to those in thick, slim and thin disks, and
 % to those in ADAFs.
-% Models of tori described here may be useful not only for accretion% disks but also for tori that formin the latest stages of neutron% star binary mergers. This is relevant for gamma ray bursts (Witt% et al. 1994) and gravitational waves (Baiotti et al. 2008).
+% Models of tori described here may be useful not only for accretion
+% disks but also for tori that formin the latest stages of neutron
+% star binary mergers. This is relevant for gamma ray bursts (Witt
+% et al. 1994) and gravitational waves (Baiotti et al. 2008).
 
 % From Komissarov:
 % The dynamics of accretion discs around galactic and extragalactic black holes may be influenced
-% by their magnetic field. In this paper, we generalize the fully relativistic theory of% stationary axisymmetric tori in Kerr metric of Abramowicz, Jaroszynski&Sikora by including% strong toroidal magnetic field and construct analytic solutions for barotropic tori with constant% angular momentum. This development is particularly important for the general relativistic% computational magnetohydrodynamics that suffers from the lack of exact analytic solutions% that are needed to test computer codes.
+% by their magnetic field. In this paper, we generalize the fully relativistic theory of
+% stationary axisymmetric tori in Kerr metric of Abramowicz, Jaroszynski&Sikora by including
+% strong toroidal magnetic field and construct analytic solutions for barotropic tori with constant
+% angular momentum. This development is particularly important for the general relativistic
+% computational magnetohydrodynamics that suffers from the lack of exact analytic solutions
+% that are needed to test computer codes.
 
 
 
@@ -88,8 +96,8 @@ In particular, (geometrically) thick accretion disks are believed to be present 
 X-ray binaries and microquasars, as well as in the central engine of gamma-ray bursts.
 
 The investigation of such systems, either by analytical or numerical means, may rely on the ability to construct suitable 
-representations based on physical assumptions. The construction of equilibrium models of stationary disks around black holes has a long tradition (see~\cite{Abramowicz:2013} and references therein). In particular, the so-called ``Polish doughnuts", developed by Paczy\'nski and collaborators~\citep{Abramowicz:1978}, provides a  very general method to build equilibrium configurations of perfect fluid matter  
- orbiting around a Kerr black hole. This fully relativistic model assumes that the disk is non-magnetized and that the matter obeys a  constant specific angular momentum distribution. \cite{Komissarov:2006} extended this method by adding a purely azimuthal magnetic 
+representations based on physical assumptions. The construction of equilibrium models of stationary disks around black holes has a long tradition (see~\cite{Abramowicz:2013} and references therein). In particular, the so-called ``Polish doughnuts"~\citep{Abramowicz:1978,Kozlowski:1978} provide a  very general method to build equilibrium configurations of perfect fluid matter  
+ orbiting around a Kerr black hole. This fully relativistic model assumes that the disk is non-magnetized and that the matter obeys a  constant specific angular momentum distribution. This method was extended by~\cite{Komissarov:2006}  by adding a purely azimuthal magnetic 
  field to build magnetized tori around rotating black holes. Assuming different distributions of angular momentum in the disks, \citet{Qian:2009} presented a method to build sequences of black hole thick accretion disks in dynamical equilibria, restricted to the purely hydrodynamical case. Building on this work, we discuss here the extension of the
 models of~\citet{Qian:2009} to disks endowed with a purely toroidal magnetic field. For the particular case of constant angular momentum distributions our method shows good agreement with the results of~\citet{Komissarov:2006}.
 
@@ -173,27 +181,23 @@ Moreover,
 %\begin{equation}
 $^\ast F^{\mu\nu} = b^{\mu}u^{\nu} - b^{\nu}u^{\mu}$
 %\end{equation}
-is the (dual of the) Faraday tensor relative to an observer with four-velocity $u^{\mu}$, and $b^{\mu}$ is the magnetic field in that frame.
-Assuming the magnetic field is purely azimuthal, i.e.~$b^r = b^{\theta} = 0$,
+is the (dual of the) Faraday tensor relative to an observer with four-velocity $u^{\mu}$, and $b^{\mu}$ is the magnetic field in that frame, with
+$b^2=b^{\mu}b_{\mu}$. Assuming the magnetic field is purely azimuthal, i.e.~$b^r = b^{\theta} = 0$,
 and taking into account that the flow is stationary and axisymmetric, the conservation of the current density and of the Faraday tensor follow. Contracting Eq.~\eqref{eq:e-m_tensor} with the projection tensor $h^{\alpha}_{\beta} = \delta^{\alpha}_{\beta} + u^{\alpha}u_{\beta}$, we arrive at
 \begin{equation}
-(w + b^2)u_{\nu}\partial_i u^{\nu} + \partial_i\left(p + \frac{b^2}{2}\right) - b_{\nu}\partial_i b^{\nu},
+(w + b^2)u_{\nu}\partial_i u^{\nu} + \partial_i\left(p + \frac{b^2}{2}\right) - b_{\nu}\partial_i b^{\nu}=0\,,
 \end{equation}
-where $i = r, \theta$. We can rewrite this equation in terms of the specific angular momentum $l$ and the angular velocity $\Omega$, to obtain
+where $i = r, \theta$. Following~\cite{Komissarov:2006} we rewrite this equation in terms of the specific angular momentum $l$ and the angular velocity $\Omega$, to obtain
 \begin{equation}\label{eq:diff_ver}
-\partial_i(\ln u_t|) - \frac{\Omega \partial_i l}{1-l\Omega} + \frac{\partial_i p}{w} + \frac{\partial_i(\mathcal{L}b^2)}{2\mathcal{L}w} = 0,
+\partial_i(\ln u_t|) - \frac{\Omega \partial_i l}{1-l\Omega} + \frac{\partial_i p}{w} + \frac{\partial_i(\mathcal{L}b^2)}{2\mathcal{L}w} = 0\,,
 \end{equation}
-where 
-\begin{equation}
-\mathcal{L} = g_{t\phi}^2 - g_{tt}g_{\phi\phi}.
-\end{equation}
+where $\mathcal{L} = g_{t\phi}^2 - g_{tt}g_{\phi\phi}$.
 To integrate Eq.~\eqref{eq:diff_ver} we first assume a barotropic equation of state $w = w(p)$ of the form
 \begin{equation}\label{eq:eos_fluid}
 p = K w^{\kappa},
 \end{equation}
 with $K$ and $\kappa$ constants.
-
-Then, we define the magnetic pressure as $p_{\mathrm{m}} = b^2/2$. Also, we can define $\tilde{p}_{\mathrm{m}} = \mathcal{L} p_{\mathrm{m}}$ and $\tilde{w} = \mathcal{L} w$, so we can write an analogue of \eqref{eq:eos_fluid} for $\tilde{p}_{\mathrm{m}}$
+Then, we define the magnetic pressure as $p_{\mathrm{m}} = b^2/2$, and introduce the definitions $\tilde{p}_{\mathrm{m}} = \mathcal{L} p_{\mathrm{m}}$ and $\tilde{w} = \mathcal{L} w$, in order to write an analog equation to Eq.~\eqref{eq:eos_fluid} for $\tilde{p}_{\mathrm{m}}$~\citep{Komissarov:2006}
 \begin{equation}\label{eq:eos_mag_tilde}
 \tilde{p}_{\mathrm{m}} = K_{\mathrm{m}} \tilde{w}_{\mathrm{m}}^{\eta},
 \end{equation}
@@ -202,26 +206,23 @@ or, in terms of the magnetic pressure $p_{\mathrm{m}}$
 p_{\mathrm{m}} = K_{\mathrm{m}} \mathcal{L}^{\eta-1} w^{\eta},
 \end{equation}
 where $K_{\mathrm{m}}$ and $\eta$ are constants.
+This particular choice of relationships, $w = w(p)$ and $\tilde{w} = \tilde{w}(\tilde{p}_{\mathrm{m}})$, fulfill the general relativistic version of the von Zeipel theorem for a toroidal magnetic field~\citep{vonZeipel:1924, Zanotti:2015}, i.e.~the surfaces of constant $\Omega$ and constant $l$ coincide.
 
-This particular choice of relationships $w = w(p)$ and $\tilde{w} = \tilde{w}(\tilde{p}_{\mathrm{m}})$, fulfill the general relativistic version for a toroidal magnetic field of the von Zeipel theorem \citep{vonZeipel:1924, Zanotti:2015}, that means the surfaces of $\Omega$ and $l$ constant coincide.
-
-We can rewrite equation \eqref{eq:diff_ver} and integrate it to give
+Integrating Eq.~\eqref{eq:diff_ver} we obtain
 \begin{equation}\label{eq:pre_full_int}
-\ln |u_t| - \int^l_0 \frac{\Omega \mathrm{d}l}{1 - \Omega l} + \int^p_0 \frac{\mathrm{d}p}{w} + \int^{\tilde{p}_{\mathrm{m}}} \frac{\mathrm{d}\tilde{p}_{\mathrm{m}}}{\tilde{w}} = \mathrm{constant}.
+\ln |u_t| - \int^l_0 \frac{\Omega \mathrm{d}l}{1 - \Omega l} + \int^p_0 \frac{\mathrm{d}p}{w} + \int^{\tilde{p}_{\mathrm{m}}} \frac{\mathrm{d}\tilde{p}_{\mathrm{m}}}{\tilde{w}} = \mathrm{const}.
 \end{equation}
-On the surface of the disk, and particularly on its inner edge,
+On the surface of the disk, and particularly on its inner edge, the conditions
+$p = \tilde{p}_{\mathrm{m}} = 0, \; u_t = u_{t, \mathrm{in}}, \; l = l_{\mathrm{in}}$
+are satisfied and, therefore, the integration constant is given by
 \begin{equation}
-p = \tilde{p}_{\mathrm{m}} = 0, \;\;\; u_t = u_{t, \mathrm{in}}, \;\;\; l = l_{\mathrm{in}}
+\mathrm{const.} = \ln |u_t| - \int^l_{l_\mathrm{in}} \frac{\Omega \mathrm{d}l}{1 - \Omega l}\,.
 \end{equation}
-then, the constant of integration is given by
-\begin{equation}
-\mathrm{constant.} = \ln |u_t| - \int^l_{\mathrm{in}} \frac{\Omega \mathrm{d}l}{1 - \Omega l}.
-\end{equation}
-Defining the total potential $W$ \citet{Abramowicz:1978}, we can write
+We can also introduce the total (gravitational plus centrifugal) potential $W$~\citep{Abramowicz:1978} and write the integral form of the equation of motion as
 \begin{equation}\label{eq:potential}
 W - W_{\mathrm{in}} = \ln|u_t| - \ln|u_{t,\mathrm{in}}| - \int^{l}_{l_{\mathrm{in}}} \frac{\Omega \mathrm{d}l}{1 - \Omega l},
 \end{equation}
-where $W_{\mathrm{in}}$ is the potential on the inner edge of the disk. With this definition, we can write \eqref{eq:pre_full_int} as
+where $W_{\mathrm{in}}$ is the potential on the inner edge of the disk (in the equatorial plane). With this definition, we can write \eqref{eq:pre_full_int} as
 \begin{equation}\label{eq:full_int}
 W - W_{\mathrm{in}} = \int^p_0 \frac{\mathrm{d}p}{w} + \int^{\tilde{p}_{\mathrm{m}}} \frac{\mathrm{d}\tilde{p}_{\mathrm{m}}}{\tilde{w}},
 \end{equation}
