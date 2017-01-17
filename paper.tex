@@ -210,11 +210,11 @@ This particular choice of relationships, $w = w(p)$ and $\tilde{w} = \tilde{w}(\
 
 Integrating Eq.~\eqref{eq:diff_ver} we obtain
 \begin{equation}\label{eq:pre_full_int}
-\ln |u_t| - \int^l_0 \frac{\Omega \mathrm{d}l}{1 - \Omega l} + \int^p_0 \frac{\mathrm{d}p}{w} + \int^{\tilde{p}_{\mathrm{m}}} \frac{\mathrm{d}\tilde{p}_{\mathrm{m}}}{\tilde{w}} = \mathrm{const}.
+\ln |u_t| - \int^l_0 \frac{\Omega \mathrm{d}l}{1 - \Omega l} + \int^p_0 \frac{\mathrm{d}p}{w} + \int_0^{\tilde{p}_{\mathrm{m}}} \frac{\mathrm{d}\tilde{p}_{\mathrm{m}}}{\tilde{w}} = \mathrm{const}.
 \end{equation}
 On the surface of the disk, and particularly on its inner edge, the conditions
 $p = \tilde{p}_{\mathrm{m}} = 0, \; u_t = u_{t, \mathrm{in}}, \; l = l_{\mathrm{in}}$
-are satisfied and, therefore, the integration constant is given by
+are satisfied and, therefore, the integration constant is simply given by
 \begin{equation}
 \mathrm{const.} = \ln |u_t| - \int^l_{l_\mathrm{in}} \frac{\Omega \mathrm{d}l}{1 - \Omega l}\,.
 \end{equation}
@@ -222,49 +222,48 @@ We can also introduce the total (gravitational plus centrifugal) potential $W$~\
 \begin{equation}\label{eq:potential}
 W - W_{\mathrm{in}} = \ln|u_t| - \ln|u_{t,\mathrm{in}}| - \int^{l}_{l_{\mathrm{in}}} \frac{\Omega \mathrm{d}l}{1 - \Omega l},
 \end{equation}
-where $W_{\mathrm{in}}$ is the potential on the inner edge of the disk (in the equatorial plane). With this definition, we can write \eqref{eq:pre_full_int} as
+where $W_{\mathrm{in}}$ is the potential at the inner edge of the disk (in the equatorial plane). With this definition, we can write Eq.~\eqref{eq:pre_full_int} as
 \begin{equation}\label{eq:full_int}
-W - W_{\mathrm{in}} = \int^p_0 \frac{\mathrm{d}p}{w} + \int^{\tilde{p}_{\mathrm{m}}} \frac{\mathrm{d}\tilde{p}_{\mathrm{m}}}{\tilde{w}},
+W - W_{\mathrm{in}} = \int^p_0 \frac{\mathrm{d}p}{w} + \int_0^{\tilde{p}_{\mathrm{m}}} \frac{\mathrm{d}\tilde{p}_{\mathrm{m}}}{\tilde{w}},
 \end{equation}
-and
+which for a barotropic equation of state can be easily integrated to give
 \begin{equation}\label{eq:pre_enthalpy_eq}
-W - W_{\rm{in}} + \frac{\kappa}{\kappa - 1}\frac{p}{w} + \frac{\eta}{\eta - 1}\frac{p_{\mathrm{m}}}{w} = 0,
+W - W_{\rm{in}} + \frac{\kappa}{\kappa - 1}\frac{p}{w} + \frac{\eta}{\eta - 1}\frac{p_{\mathrm{m}}}{w} = 0\,.
 \end{equation}
-and then, replacing $p$ and $p_{\mathrm{m}}$ by equations \eqref{eq:eos_fluid} and \eqref{eq:eos_mag},
+Replacing $p$ and $p_{\mathrm{m}}$ by equations \eqref{eq:eos_fluid} and \eqref{eq:eos_mag}, the previous equation reduces to
 \begin{equation}\label{eq:enthalpy_eq}
 W - W_{\rm{in}} + \frac{\kappa}{\kappa - 1} K w^{\kappa - 1} + \frac{\eta}{\eta - 1}K_{\mathrm{m}}(\mathcal{L} w)^{\eta - 1} = 0,
 \end{equation}
 which relates the distribution of potential with the distribution of enthalpy.
 
-Finally, we assume a polytropic equation of state given by
-\begin{equation}\label{eq:density_eq}
-p = K \rho^{\kappa}
-\end{equation}
-where $\rho$ is the fluid density.
+%Finally, we assume a polytropic equation of state given by
+%\begin{equation}\label{eq:density_eq}
+%p = K \rho^{\kappa}
+%\end{equation}
+%where $\rho$ is the fluid density.
 
-%--------------------------------------------------------------------
+%%%%%%%%%%%%
 \section{Methodology}
+%%%%%%%%%%%%
 
 \subsection{Building the disk}
 
-To construct the disks we follow the procedure described below:
-
-First, we find the location of $r_{\mathrm{cusp}}$ and $r_{\mathrm{c}}$ as the solutions to the equation $l(r) - l_{\mathrm{K}} = 0$.
-Next, we write the partial derivatives of the potential \eqref{eq:potential}
+To construct the disks we follow the approach described in \citet{Qian:2009}. First, we find the radial location of the cusp and the center of the disk in the equatorial plane, $r_{\mathrm{cusp}}$ and $r_{\mathrm{c}}$, defined as the solutions to the equation $l(r) - l_{\mathrm{K}} = 0$.
+Next, we compute the partial derivatives of the potential, Eq.~\eqref{eq:potential}
 \begin{equation}\label{eq:radial_der_pot}
-\partial_r W = \partial_r \ln|u_t| - \frac{\Omega \partial_rl}{1 - \Omega l},
+\partial_r W = \partial_r \ln|u_t| - \frac{\Omega \partial_rl}{1 - \Omega l}\,,
 \end{equation}
 and
 \begin{equation}\label{eq:polar_der_pot}
-\partial_{\theta} W = \partial_{\theta} \ln|u_t| - \frac{\Omega \partial_{\theta}l}{1 - \Omega l}.
+\partial_{\theta} W = \partial_{\theta} \ln|u_t| - \frac{\Omega \partial_{\theta}l}{1 - \Omega l}\,.
 \end{equation}
-Then, we integrate the radial partial derivative of the potential along the segment $[r_{\mathrm{cusp}}, r_{\mathrm{c}}]$ (assuming $W_{\mathrm{cusp}} = 0$) at the equatorial plane, thus obtaining the equatorial distribution of potential between $r_{\mathrm{cusp}}$ and $r_{\mathrm{c}}$
+Then, we integrate the radial partial derivative of the potential along the segment $[r_{\mathrm{cusp}}, r_{\mathrm{c}}]$ (assuming $W_{\mathrm{cusp}} = 0$) at the equatorial plane, thus obtaining the equatorial distribution of the potential between $r_{\mathrm{cusp}}$ and $r_{\mathrm{c}}$
 \begin{equation}\label{eq:equatorial_pot}
 W_{\mathrm{eq}}(r) = \int^{r}_{r_{\mathrm{cusp}}}\left(\partial_r \ln|u_t| - \frac{\Omega \partial_rl}{1 - \Omega l}\right).
 \end{equation}
-We can divide the equations \eqref{eq:radial_der_pot} and \eqref{eq:polar_der_pot} \citep{Qian:2009} to get
+Following \citet{Qian:2009} we can divide equations \eqref{eq:radial_der_pot} and \eqref{eq:polar_der_pot} to obtain
 \begin{equation}\label{eq:F}
-F(r, \theta) = -\frac{\partial_r W}{\partial_{\theta} W} = \frac{\mathrm{d}\theta}{\mathrm{d}r}.
+F(r, \theta) = -\frac{\partial_r W}{\partial_{\theta} W} = \frac{\mathrm{d}\theta}{\mathrm{d}r}\,,
 \end{equation}
 which is an ordinary differential equation that can be integrated to obtain the location of the equipotential surfaces.
 
