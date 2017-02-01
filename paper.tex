@@ -14,22 +14,17 @@
 %
 \documentclass{aa}  
 
-%
 \usepackage{graphicx}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{txfonts}
 \usepackage{hyperref}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage[options]{hyperref}
-% To add links in your PDF file, use the package "hyperref"
-% with options according to your LaTeX or PDFLaTeX drivers.
-%
+\usepackage{color}
+
+\newcommand{\tf}[1]{\textcolor{red}{TF: #1}}
+
 
 \begin{document} 
 
 \title{Magnetized Polish doughnuts revisited}
-
-%   \subtitle{}
 
    \author{Sergio Gimeno\inst{1}   \and Jos\'e A.~Font\inst{1,2} }
 
@@ -300,11 +295,11 @@ Figure~\ref{komissarov} corresponds to the same constant specific angular moment
 
 \begin{figure*}
 \centering
-\includegraphics[scale=0.17]{images/1_A.pdf}
+\includegraphics[scale=0.16]{figures/fig1a.pdf}
 \hspace{-0.3cm}
-\includegraphics[scale=0.16]{images/1_B.pdf}
+\includegraphics[scale=0.16]{figures/fig1b.pdf}
 \hspace{-0.2cm}
-\includegraphics[scale=0.16]{images/1_C.pdf}
+\includegraphics[scale=0.16]{figures/fig1c.pdf}
 \caption{Comparison with Komissarov's solution for a constant angular momentum model.}
            \label{komissarov}%
  \end{figure*}
@@ -338,6 +333,65 @@ Modelo & $\beta$ & $\gamma$ & $\beta_{\mathrm{c}}$ & $\Delta W$ & $r_{\mathrm{in
 \end{tabular}
 \end{table*}
 
+\begin{figure*}
+\centering
+\includegraphics[scale=0.16]{figures/fig2_1_1.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_1_2.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_1_3.pdf}
+\\
+\includegraphics[scale=0.16]{figures/fig2_2_1.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_2_2.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_2_3.pdf}
+\\
+\includegraphics[scale=0.16]{figures/fig2_3_1.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_3_2.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_3_3.pdf}
+\\
+\includegraphics[scale=0.16]{figures/fig2_4_1.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_4_2.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_4_3.pdf}
+\\
+\includegraphics[scale=0.16]{figures/fig2_5_1.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_5_2.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig2_5_3.pdf}
+\caption{Models.}
+           \label{models}%
+ \end{figure*}
+ 
+ \begin{figure*}
+\centering
+\includegraphics[scale=0.16]{figures/fig3a.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig3b.pdf}
+\hspace{-0.2cm}
+\includegraphics[scale=0.16]{figures/fig3c.pdf}
+\caption{Effects of the magnetization in the structure of the disk. From left to right the values are $10^3$, 1, and $10^{-3}$.}
+           \label{magnetization}%
+ \end{figure*}
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.25]{figures/fig4.pdf}
+\caption{Effects of the magnetization in the structure of the disk. Radial profiles of the density in the equatorial plane for $\beta=10^3$ (black curve), 1 (blue curve), and $10^{-3}$ (green curve). \tf{Check color code.}}
+           \label{magnetization-profile}%
+ \end{figure}
+ 
+ \begin{figure}[h!]
+\centering
+\includegraphics[scale=0.25]{figures/fig5.pdf}
+\caption{Radial profiles for \tf{Complete caption.}}
+           \label{more-profile}%
+ \end{figure}
 
 %--------------------------------------------------------------------
 \section{Conclusions}
