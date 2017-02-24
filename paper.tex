@@ -18,9 +18,9 @@
 \usepackage{txfonts}
 \usepackage{hyperref}
 \usepackage{color}
+\usepackage{float}
 
 \newcommand{\tf}[1]{\textcolor{red}{TF: #1}}
-
 
 \begin{document} 
 
@@ -36,24 +36,11 @@
              }
 
    \date{}
-
-% \abstract{}{}{}{}{} 
-% 5 {} token are mandatory
  
   \abstract
-  % context heading (optional)
-  % {} leave it empty if necessary  
-   {}
-  % aims heading (mandatory)
-   {bla}
-  % methods heading (mandatory)
-   {bla}
-  % results heading (mandatory)
-   {bla}
-  % conclusions heading (optional), leave it empty if necessary 
-   {}
+{We discuss new sequences of magnetized, equilibrium tori around Kerr black holes by combining two approaches previously considered in the literature. Our approach assumes that the test-fluid approximation holds, hence we neglect the self-gravity of the fluid. The models are built assuming a particular form of the angular momentum distribution from which the location and morphology of surfaces of equal pressure can be computed. This ansatz includes the  constant angular momentum case originally employed in the construction of thick tori - or Polish doughnuts - and has already been used to build equilibrium sequences of purely hydrodynamical models. We discuss the properties of the new models and their dependence on the initial parameters. These new sequences can be used as initial data for magnetohydrodynamical evolutions in general relativity.}
 
-   \keywords{keywords here}
+   \keywords{\tf{Complete keywords}}
 
    \maketitle
 
@@ -81,26 +68,27 @@
 % computational magnetohydrodynamics that suffers from the lack of exact analytic solutions
 % that are needed to test computer codes.
 
-
-
-Matter accretion on to a black hole is the most efficient form of energy production known in nature. The conversion of the
-gravitational energy of the infalling matter into heat and radiation may reach efficiencies
-of about 43\% in the case of rotating (Kerr) black holes. For this reason, systems formed 
-by a black hole surrounded by an accretion disk are deemed responsible for many of the most energetic astronomical phenomena observed in the cosmos.
-In particular, (geometrically) thick accretion disks are believed to be present in quasars and other active galactic nuclei, some 
+Matter accretion on to black holes is the most efficient form of energy production known in nature. The conversion of the
+gravitational energy of the infalling matter into heat and radiation may reach efficiencies of about 43\% in the case of maximally rotating (Kerr) black holes. For this reason, systems formed by a black hole surrounded by an accretion disk are deemed responsible for many of the most energetic astronomical phenomena observed in the cosmos.
+In particular, (geometrically) thick accretion disks (or tori) are believed to be present in quasars and other active galactic nuclei, some 
 X-ray binaries and microquasars, as well as in the central engine of gamma-ray bursts.
+The latter are alluded to in connection with mergers of neutron star binaries and black hole neutron star binaries, as well as with the rotational collapse that ensues at the end of the life of some massive stars. As numerical simulations show, such events  often result in a black hole surrounded by a torus.
+\tf{We need to include a few references in this paragraph.}
 
-The investigation of such systems, either by analytical or numerical means, may rely on the ability to construct suitable 
-representations based on physical assumptions. The construction of equilibrium models of stationary disks around black holes has a long tradition (see~\cite{Abramowicz:2013} and references therein). In particular, the so-called ``Polish doughnuts"~\citep{Abramowicz:1978,Kozlowski:1978} provide a  very general method to build equilibrium configurations of perfect fluid matter  
- orbiting around a Kerr black hole. This fully relativistic model assumes that the disk is non-magnetized and that the matter obeys a  constant specific angular momentum distribution. This method was extended by~\cite{Komissarov:2006}  by adding a purely azimuthal magnetic 
- field to build magnetized tori around rotating black holes. Assuming different distributions of angular momentum in the disks, \citet{Qian:2009} presented a method to build sequences of black hole thick accretion disks in dynamical equilibria, restricted to the purely hydrodynamical case. Building on this work, we discuss here the extension of the
-models of~\citet{Qian:2009} to disks endowed with a purely toroidal magnetic field. For the particular case of constant angular momentum distributions our method shows good agreement with the results of~\citet{Komissarov:2006}.
+The investigation of this type of systems, either by analytical or numerical means, may rely on the ability to construct suitable 
+representations based on physical assumptions. The construction of equilibrium models of stationary disks around black holes has indeed a long tradition (see~\cite{Abramowicz:2013} and references therein). In particular, the so-called ``Polish doughnuts"~\citep{Abramowicz:1978,Kozlowski:1978} provide a  very general method to build equilibrium configurations of perfect fluid matter  
+ orbiting around a Kerr black hole. This fully relativistic model assumes that the disk is non-magnetized and that the matter obeys a  constant specific angular momentum distribution. This method was later extended by~\cite{Komissarov:2006}  by adding a purely azimuthal magnetic 
+ field to build magnetized tori around rotating black holes. On the other hand, assuming different distributions of angular momentum in the disks, \citet{Qian:2009} presented a method to build sequences of black hole thick accretion disks in dynamical equilibria, restricted however to the purely hydrodynamical case. 
+ 
+ In this paper we combine the two approaches considered in~\cite{Komissarov:2006} and~\citet{Qian:2009} to build new sequences of equilibrium tori around Kerr black holes.
+ Building on those works, we present here the extension of the models of~\citet{Qian:2009} to account for disks endowed with a purely toroidal magnetic field. In our procedure we hence assume a form of the angular momentum distribution that departs from the constant case considered by~\cite{Komissarov:2006} and from which the location and morphology
+of surfaces of equal pressure can be numerically computed. As we shall show below, for the particular case of constant angular momentum distributions, our method is in good agreement with the results of~\citet{Komissarov:2006}.
 
-The organization of the paper is as follows:
-We assume that the test-fluid approximation holds, neglecting the self-gravity of the fluid, and assume that the space-time is described by the Kerr metric. We use geometrized units where $G = c = 1$.
+The organization of the paper is as follows: Section~\ref{framework} presents the analytic framework to build the disks while Section~\ref{methodology} explains the corresponding numerical procedure. The sequences of models are discussed in Section~\ref{results}. Finally, the conclusions are summarized in Section~\ref{conclusions}, where we also briefly indicate potential extensions of this work we plan to inspect. In our work we assume that the test-fluid approximation holds, thus neglecting the self-gravity of the fluid, and further assume that the spacetime is described by the Kerr metric. We use geometrized units where $G = c = 1$.
 
 %%%%%%%%%%%
 \section{Framework}
+\label{framework}
 %%%%%%%%%%%
 
 Equilibrium tori around Kerr black holes are built assuming that the spacetime gravitational potentials and the fluid fields are stationary and axisymmetric. In all the derivations presented below, the Kerr metric is implicitely written using standard Boyer-Lindquist coordinates. It is convenient to introduce a number of relevant characteristic radii, such as the radius
@@ -110,7 +98,7 @@ r_{\rm ms} &=& M\,\left(3+Z_2-\left[(3-Z_1)(3+Z_1+2Z_2)\right]^{1/2})\right)\,,
 \\
 r_{\rm mb} &=& 2M\,\left(  1-\frac{a_*}{2} + \sqrt{1-a_*} \right)\,,
 \end{eqnarray}
-where $Z_1=1+(1-a_*^2)^{1/3}[(1+a_*)^{1/3}+(1-a_*)^{1/3}]$, $Z_2=(3a_*^2+Z_1^2)^{1/2}$, and $a_*=a/M$, with $a$ and $M$ being the spin Kerr parameter and the black hole mass.
+where we have defined the following quantities, $Z_1=1+(1-a_*^2)^{1/3}[(1+a_*)^{1/3}+(1-a_*)^{1/3}]$, $Z_2=(3a_*^2+Z_1^2)^{1/2}$, and $a_*=a/M$, with $a$ and $M$ being the spin Kerr parameter and the black hole mass. \tf{Check that the above expressions are correct.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Distribution of angular momentum}
@@ -121,9 +109,6 @@ We introduce the specific angular momentum $l$ and the angular velocity $\Omega$
 l = - \frac{u_{\phi}}{u_t}, \;\;\; \Omega = \frac{u^{\phi}}{u^t},
 \end{equation}
 where $u^{\mu}$ is the fluid four-velocity.
-%
-%\footnote{In Kerr-Schild coordinates. Although the use of the Boyer-Lindquist coordinates yields exactly the same mathematical derivation and results.}.
-%
 The relationship between $l$ and $\Omega$ is given by the equations
 \begin{equation}
 l = - \frac{\Omega g_{\phi\phi} + g_{t\phi}}{\Omega g_{t\phi} + g_{tt}}, \;\;\; \Omega = - \frac{l g_{tt} + g_{t\phi}}{l g_{t\phi} + g_{\phi\phi}},
@@ -150,13 +135,13 @@ where constants $l_0$ and $l_{\mathrm{ms}}(r)$ are defined by $l_0 \equiv \eta l
 \begin{equation}
 0 \leq \beta \leq 1, \quad -1 \leq \gamma \leq 1, \quad 1 \leq \eta \leq \eta_{\mathrm{max}},
 \end{equation}
-with $\eta_{\mathrm{max}} = l_{\mathrm{K}}(r_{\mathrm{mb}})/l_{\mathrm{K}}(r_{\mathrm{ms}})$. In this paper we choose $\eta = \eta_{\mathrm{max}}$, then we can write $l_0$ as $l_0 = l_{\mathrm{K}}(r_{\mathrm{mb}})$. We take this choice because [explicar que esta eleccion hace que el momento angular esté comprendido entre lmb y lms para variaciones de beta entre 0 y 1. Además los discos de momento angular constante que empiezan en el cusp, no tienen borde externo para l = lmb]
+with $\eta_{\mathrm{max}} = l_{\mathrm{K}}(r_{\mathrm{mb}})/l_{\mathrm{K}}(r_{\mathrm{ms}})$. In this paper, and as it is done in~\citet{Qian:2009}, we choose $\eta = \eta_{\mathrm{max}}$, and then we can write $l_0$ as $l_0 = l_{\mathrm{K}}(r_{\mathrm{mb}})$. We take this choice because [explicar que esta eleccion hace que el momento angular esté comprendido entre lmb y lms para variaciones de beta entre 0 y 1. Además los discos de momento angular constante que empiezan en el cusp, no tienen borde externo para l = lmb] \tf{Write the explanation in the draft.}
 
 %%%%%%%%%%%%%%%%
 \subsection{Magnetized disks}
 %%%%%%%%%%%%%%%%
 
-The equations of ideal general relativistic MHD are $\nabla_{\mu} T^{\mu\nu} = 0$, $\nabla_{\mu} \,^\ast F^{\mu\nu} = 0$, and 
+The equations of ideal general relativistic MHD are the following conservation laws, $\nabla_{\mu} T^{\mu\nu} = 0$, $\nabla_{\mu} \,^\ast F^{\mu\nu} = 0$, and 
 $\nabla_{\mu} (\rho u^{\mu}) = 0$, 
 %\begin{equation}\label{eq:e-m_cons}
 %\nabla_{\mu} T^{\mu\nu} = 0,
@@ -200,7 +185,7 @@ or, in terms of the magnetic pressure $p_{\mathrm{m}}$
 \begin{equation}\label{eq:eos_mag}
 p_{\mathrm{m}} = K_{\mathrm{m}} \mathcal{L}^{\eta-1} w^{\eta},
 \end{equation}
-where $K_{\mathrm{m}}$ and $\eta$ are constants.
+where $K_{\mathrm{m}}$ and $\eta$ are constants. \tf{I think we should use a different letter for the exponent instead of $\eta$ as it can be confused with the $\eta$ in the angular momentum ansatz.}
 This particular choice of relationships, $w = w(p)$ and $\tilde{w} = \tilde{w}(\tilde{p}_{\mathrm{m}})$, fulfill the general relativistic version of the von Zeipel theorem for a toroidal magnetic field~\citep{vonZeipel:1924, Zanotti:2015}, i.e.~the surfaces of constant $\Omega$ and constant $l$ coincide.
 
 Integrating Eq.~\eqref{eq:diff_ver} we obtain
@@ -229,21 +214,28 @@ Replacing $p$ and $p_{\mathrm{m}}$ by equations \eqref{eq:eos_fluid} and \eqref{
 \begin{equation}\label{eq:enthalpy_eq}
 W - W_{\rm{in}} + \frac{\kappa}{\kappa - 1} K w^{\kappa - 1} + \frac{\eta}{\eta - 1}K_{\mathrm{m}}(\mathcal{L} w)^{\eta - 1} = 0,
 \end{equation}
-which relates the distribution of potential with the distribution of enthalpy.
-
-%Finally, we assume a polytropic equation of state given by
-%\begin{equation}\label{eq:density_eq}
-%p = K \rho^{\kappa}
-%\end{equation}
-%where $\rho$ is the fluid density.
+which relates the distribution of the potential with the distribution of enthalpy.
 
 %%%%%%%%%%%%
 \section{Methodology}
+\label{methodology}
 %%%%%%%%%%%%
 
-\subsection{Building the disk}
+\begin{figure*}[t]
+\centering
+\includegraphics[scale=0.16]{figures/fig1a.pdf}
+\hspace{-0.3cm}
+\includegraphics[scale=0.16]{figures/fig1b.pdf}
+\hspace{-0.2cm}
+\includegraphics[scale=0.16]{figures/fig1c.pdf}
+\caption{Comparison with Komissarov's solution for a constant angular momentum model. The left panel shows the density distribution in logarithm scale for all radii and all angles while the middle and right panels show, respectively, the angular profile of the logarithm of the density at the centre of the disk and the radial profile of the density at the equatorial plane.}
+           \label{komissarov}%
+ \end{figure*}
 
-To construct the disks we follow the approach described in \citet{Qian:2009}. First, we find the radial location of the cusp and the center of the disk in the equatorial plane, $r_{\mathrm{cusp}}$ and $r_{\mathrm{c}}$, defined as the solutions to the equation $l(r) - l_{\mathrm{K}} = 0$.
+
+%\subsection{Building the disk}
+
+To construct the magnetized disks we follow the approach described in \citet{Qian:2009}. First, we find the radial location of the cusp and of the centre of the disk in the equatorial plane, $r_{\mathrm{cusp}}$ and $r_{\mathrm{c}}$, defined as the solutions to the equation $l(r) - l_{\mathrm{K}} = 0$.
 Next, we compute the partial derivatives of the potential, Eq.~\eqref{eq:potential}
 \begin{equation}\label{eq:radial_der_pot}
 \partial_r W = \partial_r \ln|u_t| - \frac{\Omega \partial_rl}{1 - \Omega l}\,,
@@ -268,8 +260,9 @@ Once we have the potential distribution, we can find the gas pressure at the cen
 p_{\mathrm{c}} = w_{\mathrm{c}}(W_{\mathrm{in}} - W_{\mathrm{c}})\left(\frac{\kappa}{\kappa - 1} + \frac{\eta}{\eta - 1}\frac{1}{\beta_{\mathrm{c}}}\right)^{-1},
 \end{equation}
 where $w_{\mathrm{m}}$ is the enthalpy at the disk center and
-\begin{equation}\label{eq:beta_eq}
-\beta = p/p_{\mathrm{m}},
+\begin{equation}
+\label{eq:beta_eq}
+\beta_{\mathrm{c}} = p/p_{\mathrm{m}},
 \end{equation}
 is the magnetization parameter (being $\beta_{\mathrm{m}}$ the magnetization parameter at the disk center). By this definition, we can find the magnetic pressure at the disk center,
 \begin{equation}
@@ -277,122 +270,121 @@ p_{\mathrm{m_{\mathrm{c}}}} = p_{\mathrm{c}}/\beta_{\mathrm{c}}
 \end{equation}
 With the pressures at the center, we can also find the constants $K$ and $K_{\mathrm{m}}$ using the equations \eqref{eq:eos_fluid} and \eqref{eq:eos_mag}. And, for a given inner radius of the disk $r_{\mathrm{in}}$ we can find the potential $W_{\mathrm{in}}$. We now have all the elements required to find the enthalpy distribution (equation \eqref{eq:enthalpy_eq}), the pressure and magnetic pressure distribution (equations \eqref{eq:eos_fluid} and \eqref{eq:eos_mag}), and the density (equation \eqref{eq:density_eq}).
 
-\subsection{Numerical code}
+ 
+%\subsection{Numerical code}
 
 For the integration of equation \eqref{eq:equatorial_pot} we use the composite Simpson's rule, it is important to use a very small step of integration, because the slope is very steep. In this work, we use a step $h = 10^{-6}$ . A bigger step gives an unacceptable lack of accuracy, we tested that fact by comparison with the analytic, constant angular momentum case.
 
-To integrate the ordinary differential equation \eqref{eq:F} we use the RK4 method. Here is also important to choose a suitable step of integration, specially at the outer end of the disk, this is because the equation \eqref{eq:F} diverges of the equatorial plane (the equipotential surfaces crosses the equatorial plane perpendicularly).
+To integrate the ordinary differential equation \eqref{eq:F} we use a fourth-order Runge-Kutta method. Here is also important to choose a suitable step of integration, specially at the outer end of the disk, this is because the equation \eqref{eq:F} diverges of the equatorial plane (the equipotential surfaces crosses the equatorial plane perpendicularly).
 
-\subsection{Parameter space}
+%\subsection{Parameter space}
 
-As in \citet{Komissarov:2006}, in this paper we have chosen the exponents $\kappa = \eta = 4/3$ and the enthalpy at the disk center $w_{\mathrm{c}} = 0$. That leaves us the magnetization parameter $\beta$, the parameters of the angular momentum distribution $\beta$ and $\gamma$, the BH spin parameter $a$ and the inner radius of the disk $r_{\mathrm{in}}$. This allows us to control the size, shape, thickness and magnetization of the disk.
+As in \citet{Komissarov:2006}, in this paper we have chosen the exponents $\kappa = \eta = 4/3$ and the enthalpy at the disk center $w_{\mathrm{c}} = 0$. That leaves us the magnetization parameter $\beta_{\mathrm{c}}$, the parameters of the angular momentum distribution $\beta$ and $\gamma$, the black hole spin parameter $a$ and the inner radius of the disk $r_{\mathrm{in}}$. This allows us to control the size, shape, thickness and magnetization of the disk.
+
+\begin{table}
+\caption{List of models. Form left to right the columns report: the black hole spin $a$, the parameters of the angular momentum distribution $\beta$ and $\gamma$, the magnetization parameter $\beta_{\mathrm{c}}$ for which a maximum pressure is achieved, the corresponding radii of the maximum thermal pressure and magnetic pressure, $r_{{\rm{max}}}$ and $r_{{\mathrm{m, max}}}$, the gravitational potential diference between the center and the inner radius, $\Delta W\equiv W_{\rm c}-W_{\rm in}$, and the inner and outer radii of the disks, $r_{\mathrm{in}}$ and  $r_{\mathrm{out}}$. \tf{Complete table.}}             
+\label{table:1}      
+\centering          
+\begin{tabular}{c c c c c c  c c c c}
+\hline\hline       
+ & $a$ & $\beta$ & $\gamma$ & $\beta_{\mathrm{c}}$  & $r_{\rm{max}}$ &  $r_{\mathrm{m, max}}$ & $\Delta W$ & $r_{\mathrm{in}}$ & $r_{\mathrm{out}}$ \\ 
+\hline           
+A1 & $0.5$ & $0.0$ & $0.0$ &  &  &    &  &  & \\ 
+A2 &           & $0.5$ & $0.5$ &  &  &    &  &  & \\ 
+A3  &          & $0.9$ & $0.9$ &  &  &    &  &  &  \\ 
+A4  &          & $0.0$ & $0.9$ &  &  &    &  &  & \\ 
+A5   &         & $0.9$ & $0.0$ &  &  &    &  &  & \\ 
+A6   &         &           &           &  &  &    &  &  & \\ 
+A7   &         &           &           &  &  &    &  &  &\\ 
+ \hline 
+B1 & $0.9$ & $0.0$ & $0.0$ &  &  &    &  &  & \\ 
+B2 &           & $0.5$ & $0.5$ &  &  &    &  &  & \\ 
+B3  &          & $0.9$ & $0.9$ &  &  &    &  &  &  \\ 
+B4  &          & $0.0$ & $0.9$ &  &  &    &  &  & \\ 
+B5   &         & $0.9$ & $0.0$ &  &  &    &  &  & \\ 
+B6   &         &           &           &  &  &    &  &  & \\ 
+B7   &         &           &           &  &  &    &  &  &\\  
+ \hline 
+C1 & $0.99$ & $0.0$ & $0.0$ &  &  &    &  &  & \\ 
+C2 &             & $0.5$ & $0.5$ &  &  &    &  &  & \\ 
+C3  &            & $0.9$ & $0.9$ &  &  &    &  &  &  \\ 
+C4  &            & $0.0$ & $0.9$ &  &  &    &  &  & \\ 
+C5   &           & $0.9$ & $0.0$ &  &  &    &  &  & \\ 
+C6   &           &           &           &  &  &    &  &  & \\ 
+C7   &           &           &           &  &  &    &  &  &\\   
+\hline      
+\end{tabular}
+\end{table}
+
 
 %%%%%%%%%
 \section{Results}
+\label{results}
 %%%%%%%%%
-
-Figure~\ref{komissarov} corresponds to the same constant specific angular momentum model presented by~\citet{Komissarov:2006}. The comparison shows that our approach can reproduce those previous results with good agreement. {\bf Complete description.}
-
-\begin{figure*}
-\centering
-\includegraphics[scale=0.16]{figures/fig1a.pdf}
-\hspace{-0.3cm}
-\includegraphics[scale=0.16]{figures/fig1b.pdf}
-\hspace{-0.2cm}
-\includegraphics[scale=0.16]{figures/fig1c.pdf}
-\caption{Comparison with Komissarov's solution for a constant angular momentum model.}
-           \label{komissarov}%
- \end{figure*}
-
-
-%\begin{figure*}
-%\centering
-%\includegraphics[scale=0.4]{images/1.pdf}
-%\includegraphics[scale=0.4]{images/2.pdf}
-%\caption{test density plots}
-%           \label{FigGam}%
-% \end{figure*}
-
-\begin{table*}
-\caption{test two column table}             
-\label{table:1}      
-\centering          
-\begin{tabular}{c c c c c c c c c c}
-\hline\hline       
-                      
-Modelo & $\beta$ & $\gamma$ & $\beta_{\mathrm{c}}$ & $\Delta W$ & $r_{\mathrm{in}}$ & $r_{\mathrm{out}}$ & $r_{p_{\rm{max}}}$ & $r_{p_{\mathrm{mag, max}}}$ & $p_{\mathrm{max}}$\\ 
-\hline                    
-  B-7 & $0.5$ & $0.5$ & $10^{3}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.971$ & $2.086$ & $1.83 \times 10^{-2}$\\ 
-  B-8 & $0.5$ & $0.5$ & $10^{2}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.971$ & $2.076$ & $1.82 \times 10^{-2}$\\ 
-  B-9 & $0.5$ & $0.5$ & $1$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.931$ & $2.047$ & $1.68 \times 10^{-2}$\\ 
-  B-10 & $0.5$ & $0.5$ & $1$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.761$ & $1.861$ & $1.10 \times 10^{-2}$\\ 
-  B-11 & $0.5$ & $0.5$ & $10^{-1}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.641$ & $1.701$ & $2.95 \times 10^{-3}$\\ 
-  B-12 & $0.5$ & $0.5$ & $10^{-2}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.621$ & $1.681$ & $3.59 \times 10^{-4}$\\ 
-  B-13 & $0.5$ & $0.5$ & $10^{-3}$ & $-7.29 \times 10^{-2}$ & $1.27$ & $2.50$ & $1.611$ & $1.671$ & $3.67 \times 10^{-5}$\\ 
-\hline                  
-\end{tabular}
-\end{table*}
 
 \begin{figure*}
 \centering
 \includegraphics[scale=0.16]{figures/fig2_1_1.pdf}
 \hspace{-0.3cm}
 \includegraphics[scale=0.16]{figures/fig2_1_2.pdf}
-\hspace{-0.3cm}
+\hspace{-0.2cm}
 \includegraphics[scale=0.16]{figures/fig2_1_3.pdf}
 \\
 \includegraphics[scale=0.16]{figures/fig2_2_1.pdf}
 \hspace{-0.3cm}
 \includegraphics[scale=0.16]{figures/fig2_2_2.pdf}
-\hspace{-0.3cm}
+\hspace{-0.2cm}
 \includegraphics[scale=0.16]{figures/fig2_2_3.pdf}
 \\
 \includegraphics[scale=0.16]{figures/fig2_3_1.pdf}
 \hspace{-0.3cm}
 \includegraphics[scale=0.16]{figures/fig2_3_2.pdf}
-\hspace{-0.3cm}
+\hspace{-0.2cm}
 \includegraphics[scale=0.16]{figures/fig2_3_3.pdf}
 \\
 \includegraphics[scale=0.16]{figures/fig2_4_1.pdf}
 \hspace{-0.3cm}
 \includegraphics[scale=0.16]{figures/fig2_4_2.pdf}
-\hspace{-0.3cm}
+\hspace{-0.2cm}
 \includegraphics[scale=0.16]{figures/fig2_4_3.pdf}
 \\
 \includegraphics[scale=0.16]{figures/fig2_5_1.pdf}
 \hspace{-0.3cm}
 \includegraphics[scale=0.16]{figures/fig2_5_2.pdf}
-\hspace{-0.3cm}
+\hspace{-0.2cm}
 \includegraphics[scale=0.16]{figures/fig2_5_3.pdf}
-\caption{Models.}
-           \label{models}%
- \end{figure*}
- 
- \begin{figure*}
+\caption{Isodensity distributions (in logarithm scale) for a representative sample of our models. From left to right the columns correspond to increasing values of the black hole spin: $a=0.5$, 0.9 and 0.99. From top to bottom the rows correspond to the following parameter combinations: a) $\gamma=\beta=0$; b) $\gamma=\beta=0.5$; c) $\gamma=\beta=0.9$; d) $\gamma=0.9$, $\beta=0$; e) $\gamma=0$, $\beta=0.9$. Note that the spatial scale of the plots differs as it has been chosen to facilitate the visualization of the disks.}
+\label{models}
+\end{figure*}
+
+\begin{figure*}[t]
 \centering
 \includegraphics[scale=0.16]{figures/fig3a.pdf}
 \hspace{-0.3cm}
 \includegraphics[scale=0.16]{figures/fig3b.pdf}
 \hspace{-0.2cm}
 \includegraphics[scale=0.16]{figures/fig3c.pdf}
-\caption{Effects of the magnetization in the structure of the disk. From left to right the values are $10^3$, 1, and $10^{-3}$.}
-           \label{magnetization}%
- \end{figure*}
- 
-\begin{figure}[h!]
+\caption{Effects of the magnetization in the structure of the disk. From left to right the values are $\beta_{\rm c}=10^3$, 1, and $10^{-3}$.}
+\label{magnetization}%
+\end{figure*}
+
+We start by assessing our procedure by first building a disk that can be directly compared with one of the two models in~\citet{Komissarov:2006}. This is shown in Figure~\ref{komissarov}, which corresponds to the same constant specific angular momentum model A presented by~\citet{Komissarov:2006}. The parameters of this model are $a=0.9$, $\beta_c=0.1$, and $l=2.8$. \tf{Is this the value of $l$ we use?}
+The visual comparison shows that our approach can reproduce those previous results with good agreement. The density distribution in the $(r\sin\theta,r\cos\theta)$ plane shown in the left panel of Fig.~\ref{komissarov} is remarkably similar to that shown in the left panel of Fig.~2 in~\citet{Komissarov:2006}. Not only the morphology of both models is nearly identical but also the range of variation of the density and the location of the disk center agree well in both cases. This can be most clearly seen in the middle and right panels of Fig.~\ref{komissarov} which show, repectively, the angular profile at $r_{\rm c}$ and the radial profile at $\theta=\pi/2$. These two figures can be directly compared with Fig.~3 of~\citet{Komissarov:2006}. \tf{There are some slight differences though. Is this because we do not use the exact same value of the angular momentum?}
+
+\begin{figure}[t]
 \centering
-\includegraphics[scale=0.25]{figures/fig4.pdf}
-\caption{Effects of the magnetization in the structure of the disk. Radial profiles of the density in the equatorial plane for $\beta=10^3$ (black curve), 1 (blue curve), and $10^{-3}$ (green curve). \tf{Check color code.}}
-           \label{magnetization-profile}%
+\includegraphics[scale=0.2]{figures/fig4.pdf}
+\caption{Radial profiles of the density in the equatorial plane for $\beta=10^3$ (black curve), 1 (blue curve), and $10^{-3}$ (green curve). \tf{Check color code.}}
+\label{magnetization-profile}
  \end{figure}
  
- \begin{figure}[h!]
+\begin{figure}[t]
 \centering
-\includegraphics[scale=0.25]{figures/fig5.pdf}
-\caption{Radial profiles for \tf{Complete caption.}}
-           \label{more-profile}%
- \end{figure}
- 
+\includegraphics[scale=0.2]{figures/fig5.pdf}
+\caption{Radial profiles at the equatorial plane for models with $a=0.9$, $\beta_{\rm c}=10^{-3}$, and same combination of the $\gamma$ and $\beta$ parameters as in the rows of Fig.~\ref{models} (the specific values are indicated in the legend). \tf{Include a legend indicating the particular values of these two parameters.}}
+\label{more-profile}
+\end{figure}
+
 \begin{figure*}
 \centering
 \includegraphics[scale=0.16]{figures/fig6a.pdf}
@@ -400,68 +392,43 @@ Modelo & $\beta$ & $\gamma$ & $\beta_{\mathrm{c}}$ & $\Delta W$ & $r_{\mathrm{in
 \includegraphics[scale=0.16]{figures/fig6b.pdf}
 \hspace{-0.2cm}
 \includegraphics[scale=0.16]{figures/fig6c.pdf}
-\caption{Caption.}
+\caption{Caption. \tf{Complete the caption.}}
            \label{max-vs-magnetization}%
  \end{figure*}
+ 
+A representative sample of the isodensity surfaces (in logarithm scale) for some of our models appears in Figure~\ref{models}. From left to right the columns of this figure correspond to increasing values of the black hole spin, namely, $a=0.5$, 0.9 and 0.99, while from top to bottom the rows correspond to different combinations of the $\gamma$ and $\beta$ parameters that characterize the ansatz for the angular momentum distribution of~\citet{Qian:2009} (the particular values are indicated in the caption of the figure). The value of the magnetization parameter for all models in this figure is $\beta_{\rm c}=10^{-3}$. \tf{Is that correct?} A rapid inspection shows that the structure of the disks noticeable changes when the parameters change. Notice that the spatial scale in all of the plots of this figure has been chosen so as to facilitate the visualization of the disks (which can be fairly small in some cases) and, as such, is different in each plot. A typical Polish doughnut is represented by the model in the top-left panel. As the black hole spin increases, the maximum of the density (and of the pressure), which yields the center of the disk, moves inwards for all values of $\gamma$ and $\beta$. For $\gamma=0$ the disks are infinite, irrespective of the value of $a$. As $\gamma$ and $\beta$ increase from 0 to 0.9 (compare the three top rows) the disks become significantly thinner and radially smaller (see also Fig.~\ref{more-profile} below). \tf{Check if the description is correct. Add further relevant information.}
 
-%--------------------------------------------------------------------
+Figure~\ref{magnetization} shows the effects of changing the parameter $\beta_{\rm c}$ (the magnetization) in the structure of the disks. From left to right the values plotted in each panel are $\beta_{\rm c}=10^3$, 1, and $10^{-3}$. The model chosen corresponds to $a=0.9$ and $\gamma=\beta=0.5$. The larger the value of $\beta_{\rm c}$ the less important the effects of the magnetization in the disk structure. Figure~\ref{magnetization} shows that for the kind of magnetic field distribution we are considering, the effects of magnetization are minor. The disk structure remains fairly similar for all values of $\beta_{\rm c}$ and the only quantitative differences are found in the location of the centre of the disk (which moves inward with decreasing $\beta_{\rm c}$) and of the range of variation of the isodensity contours (the maximum being slightly larger with decreasing $\beta_{\rm c}$). This can be more clearly visualized in Figure~\ref{magnetization-profile} which displays the radial profile at the equatorial plane of the logarithm of the density \tf{Is it $\log\rho$ or $\rho$?} for the same three cases plotted in Fig.~\ref{magnetization}. \tf{Check if the description is correct. Add further relevant information.}
+
+Next, we show in Fig.~\ref{more-profile} the corresponding radial profiles at the equatorial plane for the models with black hole spin $a=0.9$. We consider the case $\beta_{\rm c}=10^{-3}$ (highest magnetization) and the same combination of the $\gamma$ and $\beta$ parameters that we employed in Fig.~\ref{models}. Therefore, this plot depicts the radial profiles of the models occupying the central column of Fig.~\ref{models}. These profiles allow for a clearer quantification of the radial extent of the disks with $\gamma$ and $\beta$. As mentioned in the description of Fig.~\ref{models} as $\gamma$ and $\beta$ increase from 0 to 0.9 (compare black, blue, and green curves) the disks become gradually smaller. At the same time, the radial location of the centre increases and the maximum value of the central density (and pressure) decreases. It is worth noticing that the radial profiles of some of the models overlap below a certain radius. More precisely, the black and red curves overlap below $r\sim 4$ and also the green and orange curves. \tf{Check if the description is correct. Add further relevant information.}
+ 
+
+
+
+ 
+In order to provide a quantitative comparison of the structural differences that appear along the sequence of equilibrium models, we plot in Fig.~\ref{max-vs-magnetization} the variation of the maximum of the density (left panel), the radial location of the maximum of the thermal pressure (middle panel), and the radial location of the maximum of the magnetic pressure (right panel) as a function of the magnetization parameter $\beta_{\rm c}$. All quantities plotted are measured at the equatorial plane. Let us first consider the left panel. The line type used indicates the value of the black hole spin $a$, namely, a dotted line is for $a=0.5$, a dashed line for $a=0.9$, and a solid line for $a=0.99$. Correspondingly, the colour indicates the value of $\beta$ and $\gamma$ used, namely, red curves correspond to $\gamma=\beta=0$, the blue ones to $\gamma=\beta=0.5$, and the black ones to $\gamma=\beta=0.9$. \tf{Is my interpretation of the line type and colour code correct?} All curves show the same monotonically decreasing trend with $\beta_{\rm c}$: for small enough and large enough values of $\beta_{\rm c}$ the value of the density maximum does not change. However, in the interval $10^{-2}\le \beta_{\rm c} \le 10^{2}$, $\rho_{\rm max}$ changes abruptly. The larger the black hole spin the larger the drop in the maximum of the density. For sufficiently large values of $\beta_{\rm c}$ (small magnetization) the value of $\rho_{\rm max}$ stays constant to the same value irrespective of the black hole rotation.
+
+In the middle panel of Fig.~\ref{max-vs-magnetization} we show the radial location of the maximum of the thermal pressure as a function of $\beta_{\rm c}$. The black hole spin is $a=0.99$ \tf{is that correct?} and the values of $\beta$ and $\gamma$ are indicated in the legend. For all values of $\beta$ and $\gamma$, the maximum of the disk thermal pressure decreases with decreasing $\beta_{\rm c}$. Below $\beta_{\rm c}\sim 10^{-3}$ the location of the maximum does not change. The panel also shows that above $\beta_{\rm c}\sim 10^{3}$ the constant value of $r_{\rm max}$ is the same irrespective of $\beta$ and $\gamma$.
+
+The dependence of the location of the maximum of the magnetic pressure with $\beta_{\rm c}$ is shown in the right panel of Fig.~\ref{max-vs-magnetization}. While the maximum of the magnetic pressure also decreases with decreasing $\beta_{\rm c}$, the constant value achieved for values above $\beta_{\rm c}\sim 10^{3}$ does depend on the specific values of $\beta$ and $\gamma$. It must be noted that, for the magnetic pressure, all models seem to cross at roughly the same value of $r_{\rm max}$, as it is more clearly shown in the inset.
+ 
+
+
+%%%%%%%%%%%
 \section{Conclusions}
+\label{conclusions}
+%%%%%%%%%%%
 
-%-------------------------------------- Two column figure (place early!)
-%   \begin{figure*}
-%   \centering
-%   %%%\includegraphics{empty.eps}
-%   %%%\includegraphics{empty.eps}
-%   %%%\includegraphics{empty.eps}
-%   \caption{Adiabatic exponent $\Gamma_1$.
-%               $\Gamma_1$ is plotted as a function of
-%               $\lg$ internal energy $\mathrm{[erg\,g^{-1}]}$ and $\lg$
-%               density $\mathrm{[g\,cm^{-3}]}$.}
-%              \label{FigGam}%
-%    \end{figure*}
-%
+In this paper we have presented new sequences of magnetized, non-self-gravitating, equilibrium tori around Kerr black holes by combining two existing approaches~\citep{Komissarov:2006,Qian:2009}. Following~\citet{Qian:2009} the models have been built assuming a form of the angular momentum distribution from which the location and morphology
+of surfaces of equal pressure are computed. This ansatz includes as a limiting case the  constant angular momentum case originally employed in the construction of thick tori - or Polish doughnuts - and was already used by~\citet{Qian:2009} to build equilibrium sequences of purely hydrodynamical models. Our disks are endowed with a purely toroidal magnetic field, as in the work of~\citet{Komissarov:2006}, which provides the methodology to handle the magnetic terms.
 
+We have discussed the properties of the new models and their dependence on the initial parameters. \tf{Expound on this presenting a short summary of our main findings.} 
 
-%--------------------------------------------------- One column table
-%   \begin{table}
-%      \caption[]{Opacity sources.}
-%         \label{KapSou}
-%     $$ 
-%         \begin{array}{p{0.5\linewidth}l}
-%            \hline
-%            \noalign{\smallskip}
-%            Source      &  T / {[\mathrm{K}]} \\
-%            \noalign{\smallskip}
-%            \hline
-%            \noalign{\smallskip}
-%            Yorke 1979, Yorke 1980a & \leq 1700^{\mathrm{a}}     \\
-%%           Yorke 1979, Yorke 1980a & \leq 1700             \\
-%            Kr\"ugel 1971           & 1700 \leq T \leq 5000 \\
-%            Cox \& Stewart 1969     & 5000 \leq             \\
-%            \noalign{\smallskip}
-%            \hline
-%         \end{array}
-%     $$ 
-%   \end{table}
-%
-
-
+\tf{To close the paper show a short outline of potential future work we plan to attempt with this research: inclusion of self-gravity as in the work of Stergioulas, and construction of disks around hairy black holes.}
 
 \begin{acknowledgements}
-      Work supported by the Spanish MINECO (grants AYA2013-40979-P and AYA2015-66899-C2-1-P) and the Generalitat Valenciana (PROMETEOII-2014-069).
+      Work supported by the Spanish MINECO (grant AYA2015-66899-C2-1-P) and the Generalitat Valenciana (PROMETEOII-2014-069).
 \end{acknowledgements}
-
-% WARNING
-%-------------------------------------------------------------------
-% Please note that we have included the references to the file aa.dem in
-% order to compile it, but we ask you to:
-%
-% - use BibTeX with the regular commands:
-%   \bibliographystyle{aa} % style aa.bst
-%   \bibliography{references.bib} % your references Yourfile.bib
-%
-% - join the .bib files when you upload your source files
-%-------------------------------------------------------------------
 
 \bibliographystyle{bibtex/aa}
 \bibliography{references}
