@@ -49,6 +49,10 @@ construction of magnetized tori around black holes”.)
 > - Sec. 2.1: the authors introduce the concept of cusp but do not really
 > define it
 
+We have included the following definition: “The cusp is defined as the circle 
+in the equatorial plane on which the pressure gradient vanishes and the angular 
+momentum of the disk equals the Keplerian angular momentum.” 
+
 > - Sec. 2.1: they introduce the equation of state (13) but do not discuss
 > how they treat the specific internal energy that is part of the
 > enthalpy used in (13). A comment should be added.
