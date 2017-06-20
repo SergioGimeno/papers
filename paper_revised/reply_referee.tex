@@ -1,0 +1,387 @@
+%
+% version 27.10.16
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%        reply
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\textheight 22.cm
+\textwidth 16.5 cm
+\oddsidemargin 0.5cm
+\evensidemargin 0.5cm
+\topmargin=-1.cm
+\hoffset -0.5cm
+ \usepackage{amssymb}
+
+\tolerance=10000
+\pagenumbering{arabic}
+\textheight 22.cm
+\textwidth 16.5 cm
+\oddsidemargin 0.5cm\evensidemargin 0.5cm
+\topmargin=-1.cm
+\hoffset -0.5cm
+\date{\today} 
+ 
+\newcommand{\bnabla}{\mbox{\boldmath $\nabla$}}
+%\newcommand{\bomega}{\mbox{\boldmath $\omega$}}
+\newcommand{\bOmega}{\mbox{\boldmath $\Omega$}}
+
+\newcommand{\insertplot}[5]{\begin{figure}
+ \hfill\hbox to 0.05in{\vbox to #5in{\vfill
+ \inputplot{#1}{#4}{#5}}\hfill}
+ \hfill\vspace{-.1in}
+ \caption{#2}\label{#3}
+ \end{figure}}
+ \newcommand{\inputplot}[3]{\special{ps:: gsave #2 -36 mul 0 rmoveto
+   currentpoint translate #2 7.0 div #3 5.0 div scale}
+ \special{ps: plotfile #1}\special{ps:: grestore}}
+\newcounter{fig}   \newcommand{\lbfig}[1]{\refstepcounter{fig}
+\label{#1} }
+ 
+\newcommand{\vphi}{\varphi}
+\newcommand{\DS}{\displaystyle}
+\newcommand{\pih}{\frac{\pi}{2}}
+\newcommand{\sqdetg}{\sqrt{-g}}
+\newcommand{\sqdetgi}{\frac{1}{\sqrt{-g}}}
+\newcommand{\edil}{e^{2\kappa \phi}}
+\newcommand{\bA}{\bar{A}}
+\newcommand{\bF}{\bar{F}}
+\newcommand{\bD}{\bar{D}}
+
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\renewcommand{\c}{\gamma}
+\renewcommand{\d}{\delta}  
+\newcommand{\g}{\nu}
+\renewcommand{\l}{\lambda}
+\renewcommand{\t}{\theta}
+\newcommand{\rot}{\mbox{rot}}
+\renewcommand{\div}{\mbox{div}}
+\newcommand{\cosec}{\mbox{cosec}}
+
+ 
+
+\newcommand{\ta}{\theta}
+\newcommand{\Si}{\Sigma}
+\newcommand{\vf}{\varphi}
+\newcommand{\dd}{\mbox{d}}
+\newcommand{\tr}{\mbox{tr}}
+\newcommand{\la}{\lambda}
+\newcommand{\ka}{\kappa}
+\newcommand{\f}{\phi}
+\newcommand{\al}{\alpha}
+\newcommand{\ga}{\gamma}
+\newcommand{\de}{\delta}
+\newcommand{\si}{\sigma}
+\newcommand{\bomega}{\mbox{\boldmath $\omega$}}
+\newcommand{\bsi}{\mbox{\boldmath $\sigma$}}
+\newcommand{\bchi}{\mbox{\boldmath $\chi$}}
+\newcommand{\bal}{\mbox{\boldmath $\alpha$}}
+\newcommand{\bpsi}{\mbox{\boldmath $\psi$}}
+\newcommand{\brho}{\mbox{\boldmath $\varrho$}}
+\newcommand{\beps}{\mbox{\boldmath $\varepsilon$}}
+\newcommand{\bxi}{\mbox{\boldmath $\xi$}}
+\newcommand{\bbeta}{\mbox{\boldmath $\beta$}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+
+\newcommand{\pont}{{\,^\ast\!}R\,R}
+
+\newcommand{\ii}{\mbox{i}}
+\newcommand{\e}{\mbox{e}}
+\newcommand{\pa}{\partial}
+\newcommand{\Om}{\Omega}
+\newcommand{\vep}{\varepsilon}
+%\newcommand{\bfR}{{\bf R}}
+\newcommand{\bfph}{{\bf \phi}}
+\newcommand{\lm}{\lambda}
+\def\theequation{\arabic{equation}}
+%\topmargin= -02cm\textheight= 23.cm\textwidth= 16.cm
+%\oddsidemargin=-01cm\evensidemargin=-01cm \font\sqi=cmssq8
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\re}[1]{(\ref{#1})}
+\newcommand{\R}{{\rm I \hspace{-0.52ex} R}}
+\newcommand{\N}{{\sf N\hspace*{-1.0ex}\rule{0.15ex}%
+{1.3ex}\hspace*{1.0ex}}}
+\newcommand{\Q}{{\sf Q\hspace*{-1.1ex}\rule{0.15ex}%
+{1.5ex}\hspace*{1.1ex}}}
+\newcommand{\C}{{\sf C\hspace*{-0.9ex}\rule{0.15ex}%
+{1.3ex}\hspace*{0.9ex}}}
+\newcommand{\eins}{1\hspace{-0.56ex}{\rm I}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+\def\theequation{\thesection.\arabic{equation}}
+
+
+
+\begin{document}
+
+\title{ 
+{\bf Reply to the  Referee report:} \\ {\large AA/2017/30935} \\  {\large  \textit{Magnetised Polish doughnuts revisited}\\ by Sergio Gimeno-Soler and Jos\'e A. Font.}
+} 
+
+\maketitle 
+
+Dear A\&A Editor,
+
+\bigskip
+
+Thank you for sending us the report of the referee, whom we thank for
+carefully reading our manuscript and providing very useful feedback. We 
+have made several changes addressing the issues raised in the report, 
+which are listed below together with our response. The changes made in 
+the manuscript are highlighted in boldface, to facilitate identification. 
+We hope that with these amendments the paper will be considered 
+acceptable for publication on \textit{Astronomy and Astrophysics}.
+
+\bigskip
+
+
+
+Best wishes,
+
+\bigskip
+
+
+
+The authors
+
+\bigskip
+
+\section*{Referee report -- AA/2017/30935}
+
+We are grateful to the referee for the interesting comments provided in his/her report.
+We have followed the referee's suggestions and have incorporated most of his/her comments 
+in our manuscript. Below, we ({\bf A}) address the various issues raised by the referee ({\bf R}).
+
+\bigskip
+
+{\bf R:} The paper presents a new procedure to construct sequences of equilibrium
+tori around Kerr black holes that are endowed with a toroidal magnetic
+field. These configurations are not expected to be produced under generic
+conditions but the construction of such equilibria is interesting per se
+and has a rather long history. Furthermore, as discussed by the authors,
+the availability of such equilibria can be employed in test simulations
+of general-relativistic codes in ideal MHD.The paper is nicely written with a clear discussion of the procedure
+followed and of the properties of the tori that have been found. The
+paper is essentially ready for publication but there are a few aspects
+that could be improved and that I ask the authors to consider.
+
+\bigskip
+
+{\bf R:} - Title: I frankly find it unnecessarily colloquial. I do not insist but
+I think a more pragmatic title such as ``A new method for the
+construction of magnetized tori around black holes" is scientifically
+more informative.
+
+\bigskip
+
+{\bf A:} We agree with the referee about the title being colloquial. Our choice was
+motivated by the title of the paper of Qian et al (2009), ``The Polish 
+doughnuts revisited …", of which our paper might be considered an extension 
+(by incorporating magnetic fields). We would prefer to keep the original 
+title, if the referee concurred. If that were not the case, we would not
+object to having it changed to his/her suggestion. (``A new method for the
+construction of magnetized tori around black holes".)
+
+\bigskip
+
+{\bf R:} - Sec. 2.1: the authors introduce the concept of cusp but do not really
+define it
+
+\bigskip
+
+{\bf A:} We have included the following definition: ``The cusp is defined as the circle 
+in the equatorial plane on which the pressure gradient vanishes and the angular 
+momentum of the disk equals the Keplerian angular momentum." 
+
+\bigskip
+
+{\bf R:} - Sec. 2.1: they introduce the equation of state (13) but do not discuss
+how they treat the specific internal energy that is part of the
+enthalpy used in (13). A comment should be added.
+
+\bigskip
+
+{\bf A:}
+
+\bigskip
+
+{\bf R:} - Sec. 2.1: I am not clear how the magnetic field is actually
+prescribed. The author mention that the only nonzero component of
+the magnetic field in the comoving frame is the azimuthal one but I am
+still unclear how the strength of this component is specified. A
+comment should be added.
+
+\bigskip
+
+{\bf A:} 
+
+\bigskip
+
+{\bf R:} - Sec. 2.1: More on this topic: do the fluid isobaric surfaces (i.e. the
+surfaces of constant fluid pressure) coincide with the magnetic
+isobaric surfaces (i.e. the surfaces of constant magnetic pressure)?
+How are these surfaces related to the iso-density surfaces? A comment
+should be added.
+
+\bigskip
+
+{\bf A:} 
+
+\bigskip
+
+{\bf R:} - Sec. 3: the authors are a bit too sloppy when referring to the fluid
+pressure, which they call respectively: ``fluid pressure", ``gas
+pressure" ``thermal pressure", and sometimes simply as ``pressure". Since
+distinguishing the fluid, magnetic and total pressure is important, I
+ask the authors to always just talk of ``fluid pressure".
+
+\bigskip
+
+{\bf A:} We have followed the recomendation of the referee and in the revised version
+of the paper only mentions to ``fluid pressure", ``magnetic pressure", and 
+``total pressure" appear. Those appearances are highlighted in boldface
+throughout.
+
+\bigskip
+
+{\bf R:} - Sec. 3: similar considerations apply to the density, which should
+be referred to as ``rest-mass density"
+
+\bigskip
+
+{\bf A:} Done.
+
+\bigskip
+
+{\bf R:} - Sec. 3: the authors discuss that the rest-mass density distribution can
+``be trivially obtained inverting the barotropic relation, $p = K
+rho^kappa$". I am not sure this is so trivial unless an assumption is
+made on the specific internal energy; the authors should discuss more
+clearly how they actually obtain the density from Eqs. (12) and (14).
+
+\bigskip
+
+{\bf A:} 
+
+\bigskip
+
+{\bf R:} - Sec. 3: the authors discuss that Eq. (24) diverges for $\theta \rightarrow \pi/2$,
+i.e. at the equator. I am a bit puzzled by this statement and I wonder if
+this is an exact statement, ie whether it is true that
+
+\begin{equation}
+\partial_{\theta} W = 0 \ \mathrm{for} \ \theta \rightarrow \frac{\pi}{2}.
+\end{equation}
+
+If this is an exact result, I urge the authors to prove it. If it is
+not, I urge the authors to simply mention that the gradients become
+very small.
+
+\bigskip
+
+{\bf A:} 
+
+\bigskip
+
+{\bf R:} - Fig. 1: as with the middle panel, I suggest that the right
+panel should also show the logarithm of the rest-mass density.
+
+\bigskip
+
+{\bf A:} 
+
+\bigskip
+
+{\bf R:} - Fig. 2: all of the panels would benefit from a legend showing the
+corresponding values of gamma and beta. This would avoid having to read the caption repeatdly. The same is true also for Fig. 3.
+
+\bigskip
+
+{\bf A:} 
+
+\bigskip
+
+{\bf R:} - Fig. 4: the caption should be corrected in ``$\beta = 10^3$ --> $\beta_{m_c}
+= 10^3$".
+
+\bigskip
+
+{\bf A:} 
+
+\bigskip
+
+{\bf R:} - Fig. 4: the authors do not discuss what is the largest magnetization
+that they can handle. I agree that $\beta_{m_c} = 10^{-3}$ is probably
+already quite high, but what happens for say $\beta_{m_c} = 10^{-6}$? Can
+a solution still be found?
+
+\bigskip
+
+{\bf A:} 
+
+\bigskip
+
+{\bf R:} - Sec. 4: I find the discussion in this section the less clear; a lot
+of the considerations appear phenomenological but I can't find the
+simple back-of-the-envelope demonstration that what the authors observe
+numerically is what should be expected on physical grounds. For
+example, the authors find that the $\rho_{\mathrm{max}}$ increases with magnetization
+(left panel of Fig. 6) or that the position of the rest-mass density
+maximum moves in with increasing magnetization (middle panel of
+Fig. 6). What are the physical reasons for this behavior? I have some
+suggestions on this but I urge the authors to provide some simple and
+intuitive explanations first.
+
+\bigskip
+
+{\bf A:}
+
+\bigskip
+
+{\bf R:} - References: the list is already quite complete but maybe it can be
+complemented with the following ones, many of which are actually
+written by one of the authors.
+
+A comprehensive discussion of the properties of tori from merging binaries:
+
+http://adsabs.harvard.edu/abs/2016arXiv160703540B
+
+
+First detailed discussion of non-constant specific angular momentum tori:
+
+http://adsabs.harvard.edu/abs/2004MNRAS.354.1040M
+
+First discussion of the dynamics of magnetized tori built with the Komissarov solution
+
+http://adsabs.harvard.edu/abs/2007MNRAS.378.1101M
+
+\bigskip
+
+{\bf A:} We have incorporated in the article the first and the third references 
+suggested by the referee. However, we have not incorporated the second 
+reference. While this is a very relevant work in the context of oscillations 
+of non-constant-angular momentum disks, including this reference in our 
+work seems to us a bit forced since it discusses aspects which are a bit 
+away from the main discourse of our paper.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\begin{small}
+\begin{thebibliography}{99}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%
+
+%  
+\end{thebibliography}
+
+ \end{small}
+
+ \end{document}
