@@ -139,7 +139,6 @@ p_{\mathrm{m}} = K_{\mathrm{m}} \mathcal{L}^{\lambda
 where $K_{\mathrm{m}}$ and $\lambda
 $ are constants.
 This particular choice of barotropic relationships, $w = w(p)$ and $\tilde{w} = \tilde{w}(\tilde{p}_{\mathrm{m}})$, fulfill the general relativistic version of the von Zeipel theorem for a toroidal magnetic field~\citep{vonZeipel:1924, Zanotti:2015}, i.e.~the surfaces of constant $\Omega$ and constant $l$ coincide.
-{\bf We have to introduce the response to the comment of the referee regarding the specific internal energy.}
 
 We can now integrate Eq.~\eqref{eq:diff_ver} to obtain
 \begin{equation}\label{eq:pre_full_int}
@@ -224,7 +223,9 @@ is the magnetisation parameter ($\beta_{\mathrm{m}_{\mathrm{c}}}$ being the magn
 \begin{equation}
 p_{\mathrm{m_{\mathrm{c}}}} = p_{\mathrm{c}}/\beta_{\mathrm{m}_{\mathrm{c}}}\,.
 \end{equation}
-With both pressures known at the centre, fluid and magnetic, we can now find the constants $K$ and $K_{\mathrm{m}}$ using equations \eqref{eq:eos_fluid} and \eqref{eq:eos_mag}. Therefore, for a given inner radius of the disc $r_{\mathrm{in}}$ we can obtain the potential $W_{\mathrm{in}}$. We now finally have all the ingredients required to find the enthalpy distribution (Eq.~\eqref{eq:enthalpy_eq}), the fluid pressure and magnetic pressure distributions (Eqs.~\eqref{eq:eos_fluid} and \eqref{eq:eos_mag}), and the {\bf rest-mass} density distribution, which can be trivially obtained inverting the barotropic relation, $p = K \rho^{\kappa}$. 
+With both pressures known at the centre, fluid and magnetic, we can now find the constants $K$ and $K_{\mathrm{m}}$ using equations \eqref{eq:eos_fluid} and \eqref{eq:eos_mag}. Therefore, for a given inner radius of the disc $r_{\mathrm{in}}$ we can obtain the potential $W_{\mathrm{in}}$. We now finally have all the ingredients required to find the enthalpy distribution (Eq.~\eqref{eq:enthalpy_eq}), the fluid pressure and magnetic pressure distributions (Eqs.~\eqref{eq:eos_fluid} and \eqref{eq:eos_mag}), and the {\bf rest-mass} density distribution, which can be trivially obtained inverting the barotropic relation, $p = K \rho^{\kappa}$. {\bf We note that the specific internal energy $\varepsilon$ is needed to compute the enthalpy. We obtain
+this quantity by combining the ideal fluid and the barotropic equations of state, which yields 
+$\varepsilon=\frac{K}{\kappa-1}\rho^{\kappa-1}$.}
 
 For the integration of Eq.~\eqref{eq:equatorial_pot} we use the composite Simpson's rule. It is important to use a very small integration step because the slope is very steep. In this work, we use a step $h = 10^{-6}$. Using the analytic, constant angular momentum case for comparison, we tested that 
 a larger value of $h$ gives unacceptable accuracy losses. On the other hand, to integrate the ordinary differential equation \eqref{eq:F} we use a fourth-order Runge-Kutta method. Again, it is also important here to choose a suitable step of integration, especially at the outer end of the disc, because Eq.~\eqref{eq:F} diverges at the equatorial plane (the equipotential surfaces cross the equatorial plane perpendicularly).
