@@ -228,7 +228,7 @@ this quantity by combining the ideal fluid and the barotropic equations of state
 $\varepsilon=\frac{K}{\kappa-1}\rho^{\kappa-1}$.}
 
 For the integration of Eq.~\eqref{eq:equatorial_pot} we use the composite Simpson's rule. It is important to use a very small integration step because the slope is very steep. In this work, we use a step $h = 10^{-6}$. Using the analytic, constant angular momentum case for comparison, we tested that 
-a larger value of $h$ gives unacceptable accuracy losses. On the other hand, to integrate the ordinary differential equation \eqref{eq:F} we use a fourth-order Runge-Kutta method. Again, it is also important here to choose a suitable step of integration, especially at the outer end of the disc, because Eq.~\eqref{eq:F} diverges at the equatorial plane (the equipotential surfaces cross the equatorial plane perpendicularly).
+a larger value of $h$ gives unacceptable accuracy losses. On the other hand, to integrate the ordinary differential equation \eqref{eq:F} we use a fourth-order Runge-Kutta method. Again, it is also important here to choose a suitable step of integration, especially at the outer end of the disc, because Eq.~\eqref{eq:F} diverges at the equatorial plane (the equipotential surfaces cross the equatorial plane perpendicularly). {\bf We show the proof for this statment at appendix \ref{div_partial_W}.}
 
 \begin{table}
 \caption{List of models for $\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$. From left to right the columns report: the model name (with A, B and C standing for black hole spin $a = 0.5$, $0.9$ and $0.99$, respectively), the parameters of the angular momentum distribution $\beta$ and $\gamma$, the corresponding radii of the maximum {\bf fluid} pressure and magnetic pressure, $r_{{\rm{max}}}$ and $r_{{\mathrm{m, max}}}$, the gravitational potential difference between the centre and the inner radius, $\Delta W\equiv W_{\rm c}-W_{\rm in}$, and the inner and outer radii of the discs, $r_{\mathrm{in}}$ and $r_{\mathrm{out}}$.}             
@@ -414,7 +414,9 @@ In order to provide a quantitative comparison of the structural differences that
 
 In the middle panel of Fig.~\ref{max-vs-magnetisation} we show the radial location of the maximum of the {\bf fluid} pressure as a function of $\beta_{\mathrm{m}_{\mathrm{c}}}$. The black hole spin is $a=0.99$ and the values of $\beta$ and $\gamma$ are indicated in the legend. For all values of $\beta$ and $\gamma$, the maximum of the location of the disc {\bf fluid} pressure decreases with decreasing $\beta_{\mathrm{m}_{\mathrm{c}}}$. Below $\beta_{\mathrm{m}_{\mathrm{c}}}\sim 10^{-3}$ the location of the maximum does no longer change. The panel also shows that above $\beta_{\mathrm{m}_{\mathrm{c}}}\sim 10^{3}$ the constant value of $r_{\rm max}$ is the same irrespective of $\beta$ and $\gamma$, as expected, because for purely hydrodynamic discs, $r_{\mathrm{max}} = r_{\mathrm{c}}$.
 
-The dependence of the location of the maximum of the magnetic pressure with $\beta_{\mathrm{m}_{\mathrm{c}}}$ is shown in the right panel of Fig.~\ref{max-vs-magnetisation}. While this location also decreases with decreasing $\beta_{\mathrm{m}_{\mathrm{c}}}$, the constant value achieved for values above $\beta_{\mathrm{m}_{\mathrm{c}}}\sim 10^{3}$ does depend on the specific values of $\beta$ and $\gamma$, contrary to what happens with the fluid pressure. It must be noted that the location of the maximum of the magnetic pressure is nearly identical for all models considered when $\log_{10}\beta_{\mathrm{m}_{\mathrm{c}}} \sim 0.5$. At this value of $\beta_{\mathrm{m}_{\mathrm{c}}}$ all models seem to cross, as it is more clearly shown in the inset of the right panel of Fig.~\ref{max-vs-magnetisation}.
+The dependence of the location of the maximum of the magnetic pressure with $\beta_{\mathrm{m}_{\mathrm{c}}}$ is shown in the right panel of Fig.~\ref{max-vs-magnetisation}. While this location also decreases with decreasing $\beta_{\mathrm{m}_{\mathrm{c}}}$, the constant value achieved for values above $\beta_{\mathrm{m}_{\mathrm{c}}}\sim 10^{3}$ does depend on the specific values of $\beta$ and $\gamma$, contrary to what happens with the fluid pressure. {\bf It must be noted that the location of the maximum of the magnetic pressure is nearly identical for all models considered when $\beta_{\mathrm{m}_{\mathrm{c}}} = 1/(\lambda - 1) = 3$ ({\bf we show the proof for this affirmation at the appendix \ref{app_magmax})}. At this value of $\beta_{\mathrm{m}_{\mathrm{c}}}$ all models cross at $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$, as it is more clearly shown in the inset of the right panel of Fig.~\ref{max-vs-magnetisation}} 
+
+% It must be noted that the location of the maximum of the magnetic pressure is nearly identical for all models considered when $\log_{10}\beta_{\mathrm{m}_{\mathrm{c}}} \sim 0.5$. At this value of $\beta_{\mathrm{m}_{\mathrm{c}}}$ all models seem to cross, as it is more clearly shown in the inset of the right panel of Fig.~\ref{max-vs-magnetisation}.
 
 As a final remark we note that in the left and middle panels of Fig.~\ref{max-vs-magnetisation} we do not show the data for models with $\beta \neq \gamma$ as they coincide with the respective models with the same value of $\beta$. Moreover, the middle and right panels only show the data for $a=0.99$ because changing the value of the spin parameter of the black hole only yields a change of scale. Therefore, if we chose the range of the graph accordingly, the plots would be identical (same relative differences between the curves) irrespective of the value of $a$.
 
@@ -423,7 +425,7 @@ As a final remark we note that in the left and middle panels of Fig.~\ref{max-vs
 \label{conclusions}
 %%%%%%%%%%%
 
-In this paper we have presented a procedure to build equilibrium sequences of magnetised, non-self-gravitating discs around Kerr black holes which combines the two existing approaches of~\citet{Komissarov:2006} and~\citet{Qian:2009}. On the one hand we have followed~\citet{Qian:2009} and have assumed a form of the angular momentum distribution in the disc from which the location and morphology of surfaces of equal potential can be computed. As a limiting case, this ansatz includes the constant angular momentum case originally employed in the construction of thick tori -- or Polish doughnuts~\citep{Abramowicz:1978,Kozlowski:1978}  -- and was already used by~\citet{Qian:2009} to build equilibrium sequences of purely hydrodynamical models. On the other hand, our discs are endowed with a purely toroidal magnetic field, as in the work of~\citet{Komissarov:2006}, which provides the methodology we have followed to handle the magnetic terms. On a similar note, we cite the work of~\citet{Wielgus:2015} who have recently extended the solution of~\citet{Komissarov:2006} to include non-constant specific angular momentum tori. These authors  limited their consideration to power-law distributions and were particularly focused on the stability of such tori to the MRI. The approach discussed in our work differs from that of~\citet{Wielgus:2015} and, moreover, we have explored a much wider parameter space.
+In this paper we have presented a procedure to build equilibrium sequences of magnetised, non-self-gravitating discs around Kerr black holes which combines the two existing approaches of~\citet{Komissarov:2006} and~\citet{Qian:2009}. On the one hand we have followed~\citet{Qian:2009} and have assumed a form of the angular momentum distribution in the disc from which the location and morphology of surfaces of equal potential can be computed. As a limiting case, this ansatz includes the constant angular momentum case originally employed in the construction of thick tori -- or Polish doughnuts~\citep{Abramowicz:1978,Kozlowski:1978}  -- and was already used by~\citet{Qian:2009} to build equilibrium sequences of purely hydrodynamical models. On the other hand, our discs are endowed with a purely toroidal magnetic field, as in the work of~\citet{Komissarov:2006}, which provides the methodology we have followed to handle the magnetic terms. On a similar note, we cite the work of~\citet{Wielgus:2015} who have recently extended the solution of~\citet{Komissarov:2006} to include non-constant specific angular momentum tori. These authors limited their consideration to power-law distributions and were particularly focused on the stability of such tori to the MRI. The approach discussed in our work differs from that of~\citet{Wielgus:2015} and, moreover, we have explored a much wider parameter space.
 
 We have discussed the properties of the new models and their dependence on the initial parameters, namely the magnetisation parameter $\beta_{\mathrm{m}_{\mathrm{c}}}$, the parameters $\beta$ and $\gamma$ describing the angular momentum distribution, the black hole spin parameter $a$, and the inner radius of the disc $r_{\mathrm{in}}$. We have shown the effects of changing $\beta$ and $\gamma$ beyond the purely hydrodynamical case considered in~\citet{Qian:2009}. The mophology of the solutions we have built no longer changes for magnetisation values above $\beta_{\mathrm{m}_{\mathrm{c}}} \sim 10^{3}$ and below $\beta_{\mathrm{m}_{\mathrm{c}}} \sim 10^{-3}$. These cases can thus be considered as the hydrodynamical and MHD limiting cases, respectively. The new sequences of magnetised discs around black holes presented in this work can be used as initial data for magnetohydrodynamical evolutions in general relativity. In the near future, we plan to extend this work along two main directions, namely (i) including the self-gravity of the discs, following the approach laid out in~\citet{Stergioulas:2011}, and (ii) constructing accretion discs around hairy black holes, both, with scalar and Proca hair~\citep{Herdeiro:2014,Herdeiro:2016}.
 
@@ -433,5 +435,111 @@ It is a pleasure to thank P.~C.~Fragile and N.~Stergioulas for useful discussion
 
 \bibliographystyle{bibtex/aa}
 \bibliography{references}
+
+\begin{appendix}
+\section{Divergence of equation \eqref{eq:F} at $\theta = \pi/2$}\label{div_partial_W}
+
+Eq.~\eqref{eq:polar_der_pot} of the paper gives us
+
+\begin{eqnarray*}
+\partial_{\theta} W = \partial_{\theta} \ln|u_t| - \frac{\Omega \partial_{\theta}l}{1 - \Omega l}\, = 0.
+\end{eqnarray*}
+
+Then, we have to prove that either the two terms of this equation are equal or they are identically zero at $\theta = \pi/2$. We shall see that the latter is true.
+First, we take the derivative of the angular momentum distribution $\partial_{\theta} l$. From Eq.~(7) we can write the angular momentum distribution as $l(r, \theta) = l(r) \sin^{2\gamma} \theta$, so that the derivative reads
+\begin{eqnarray*}
+\partial_{\theta} l = 2\gamma l(r) \sin^{2\gamma - 1} \theta \cos \theta \,.
+\end{eqnarray*}
+Taking $\theta = \pi/2$ leads to $\partial_{\theta} l = 0$, so the second term equals to zero.
+To show that the first term is also zero, we write it as
+\begin{eqnarray*}
+\partial_{\theta} \ln|u_t| = \partial_{\theta} \ln \left(\frac{\mathcal{L}}{\mathcal{A}}\right)^{\frac{1}{2}}\,,
+\end{eqnarray*}
+where $\mathcal{L} = g_{t \phi}^2 - g_{tt} g_{\phi\phi}$ and $\mathcal{A} = g_{\phi\phi} + 2 l g_{t\phi} + l^2g_{tt}$, and we have dropped the absolute value, as it is irrelevant to this discussion. Then, the derivative is
+\begin{eqnarray*}
+\partial_{\theta} \ln|u_t| = \frac{1}{2} \frac{\mathcal{A}}{\mathcal{L}}\frac{\mathcal{A}\partial_{\theta}{\mathcal{L}} - \mathcal{L}\partial_{\theta}\mathcal{A}}{\mathcal{A}^2} = \frac{1}{2} \frac{\mathcal{A}\partial_{\theta}{\mathcal{L}} - \mathcal{L}\partial_{\theta}\mathcal{A}}{\mathcal{A} \mathcal{L}}\,.
+\end{eqnarray*}
+We use Boyer-Lindquist coordinates, for which the metric components read
+\begin{eqnarray*}
+g_{tt} = - \left(1 - \frac{2Mr}{\rho^2}\right), \ g_{t\phi} = -\frac{2Mar\sin^2\theta}{\rho^2}, \ g_{\phi\phi} = \left(r^2 + a^2 + \frac{2Ma^2r\sin^2\theta}{\rho^2}\right) \sin^2 \theta\,,
+\end{eqnarray*}
+where $\rho^2 = r^2 + a^2\cos^2 \theta$. Therefore, we obtain $\mathcal{L} = \Delta \sin^2 \theta$, where $\Delta = r^2 - 2Mr + a^2$, and its derivative $\partial_{\theta}\mathcal{L} = 2 \Delta \sin \theta \cos \theta$, which is zero for $\theta = \pi/2$. Next, we take the derivative of $\mathcal{A}$
+\begin{eqnarray*}
+\partial_{\theta} \mathcal{A} = \partial_{\theta} g_{\phi\phi} + 2 (\partial_{\theta} l) g_{t\phi} + 2l\partial_{\theta} g_{t\phi} + 2l(\partial_{\theta} l) g_{tt} + l^2 \partial_{\theta} g_{tt} = \partial_{\theta} g_{\phi\phi} + 2l\partial_{\theta} g_{t\phi} + l^2 \partial_{\theta} g_{tt}\,,
+\end{eqnarray*}
+where we have used the previous result that $\partial_{\theta} l=0$ at $\theta = \pi/2$. By inspecting the metric components, it is easy to see that all terms depending on $\theta$ are functions of $\sin^2 \theta$ or $\cos^2 \theta$. This means their $\theta$ derivatives will have at least a $\cos \theta$ multiplying. Then $\partial_{\theta} \mathcal{A} = 0$ at $\theta = \pi/2$. Therefore, $\partial_{\theta} \ln|u_t|$ is also zero at $\theta = \pi/2$.
+
+\section{Magnetization for $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$}\label{app_magmax}
+
+Here, we derive the condition $\beta_{\mathrm{m}_{\mathrm{c}}} = 1/(\lambda - 1)$ for $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$.
+First, we can use equation~\eqref{eq:eos_mag} to write 
+
+\begin{equation}\label{eq_max}
+\frac{\partial{p_{\mathrm{m}}(r)}}{\partial r} = \partial_{r} \left(K_{\mathrm{m}} \mathcal{L}^{\lambda -1} w^{\lambda}\right) = 0,
+\end{equation}
+
+Computing, we arrive at
+
+\begin{equation}
+\partial_{r} p_{\mathrm{m}} = K_{\mathrm{m}} \mathcal{L}^{\lambda - 2}w^{\lambda} [(\lambda - 1)(\partial_r \mathcal{L}) w + \lambda \mathcal{L} (\partial_r w)].
+\end{equation}
+
+We can see that inside the disc $K_{\mathrm{m}} \mathcal{L}^{\lambda - 2}w^{\lambda} \neq 0$, So to fulfill the extremum condition \eqref{eq_max} we need 
+
+\begin{equation}\label{eq:simple_expr}
+(\lambda - 1)(\partial_r \mathcal{L}) w + \lambda \mathcal{L} (\partial_r w) = 0
+\end{equation}
+
+To evaluate this expressión, we need to compute the partial derivatives $\partial_r \mathcal{L}$ and $\partial_r w$. The derivative of $\mathcal{L}$ is esay to compute, as $\mathcal{L} = \Delta \sin^2 \theta$. So its partial derivative is
+
+\begin{equation}
+\partial_r \mathcal{L} = 2(r-M)\sin^2 \theta
+\end{equation}
+
+Now, we take our attention to $\partial_r w$. From eq.~\eqref{eq:enthalpy_eq} we have
+
+\begin{equation}
+w = \left[-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]^{\frac{1}{\lambda-1}}
+\end{equation}
+
+Then, we can take its derivative
+
+\begin{equation}
+\partial_r w = \frac{w}{\lambda - 1} \left[-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]^{-1} \left[\left(-\partial_r W \left(\frac{\lambda -1 }{\lambda}\right) \frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right) + \left(-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{-(\lambda - 1) K_{\mathrm{m}} \mathcal{L}^{\lambda - 2} \partial_r \mathcal{L}}{(K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1})^2}\right)\right]
+\end{equation}
+
+Since we are at $r = r_{\mathrm{c}}$ the derivative of the potential is zero ($\partial_r W(r, \pi/2)|_{r = r_{\mathrm{c}}} = 0$), so we can simplify the expression to get
+
+\begin{equation}
+\partial_r w = \frac{w}{\lambda - 1} \left[-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]^{-1} \left(-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right)\left[\frac{-(\lambda - 1) K_{\mathrm{m}} \mathcal{L}^{\lambda - 2} \partial_r \mathcal{L}}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]
+\end{equation}
+
+And we can further simplify this, to arrive at
+
+\begin{equation}
+\partial_r w = - w \left[\frac{K_{\mathrm{m}} \mathcal{L}^{\lambda - 2} \partial_r \mathcal{L}}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]
+\end{equation}
+
+Then, we can insert this expression at eq.~\eqref{eq:simple_expr} to obtain
+
+\begin{equation}
+(\partial_r \mathcal{L}) w [(\lambda -1)(K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}) - \lambda K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}] = 0
+\end{equation}
+
+As $(\partial_r \mathcal{L}) w \neq 0$ inside the disc, we can simplify this, to arrive at 
+
+\begin{equation}
+K (\lambda - 1) = K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}
+\end{equation}
+
+The, we can use equations \eqref{eq:eos_fluid}, \eqref{eq:eos_mag} and \eqref{eq:beta_eq} at the center (remember that $w_{\mathrm{c}} = 1$) to write $K$ as $K = \beta_{\mathrm{m}_{\mathrm{c}}} K_\mathrm{m}\mathcal{L}^{\lambda -1}$. This allows us to write the simple expression
+
+\begin{equation}
+\beta_{\mathrm{m}_{\mathrm{c}}} = \frac{1}{\lambda - 1}
+\end{equation}
+
+\sg{We should add a short discussion of the generality of this result.}
+
+\end{appendix}
 
 \end{document}
