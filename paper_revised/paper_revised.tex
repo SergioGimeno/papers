@@ -437,105 +437,87 @@ It is a pleasure to thank P.~C.~Fragile and N.~Stergioulas for useful discussion
 \bibliography{references}
 
 \begin{appendix}
-\section{Divergence of equation \eqref{eq:F} at $\theta = \pi/2$}\label{div_partial_W}
-
-Eq.~\eqref{eq:polar_der_pot} of the paper gives us
-
-\begin{eqnarray*}
+\section{Divergence of equation~\eqref{eq:F} at $\theta = \pi/2$}\label{div_partial_W}
+To prove that Eq.~\eqref{eq:F} diverges at $\theta = \pi/2$ we need to show that
+Eq.~\eqref{eq:polar_der_pot} vanishes at the equator, i.e.
+\begin{eqnarray}
 \partial_{\theta} W = \partial_{\theta} \ln|u_t| - \frac{\Omega \partial_{\theta}l}{1 - \Omega l}\, = 0.
-\end{eqnarray*}
-
+\end{eqnarray}
 Then, we have to prove that either the two terms of this equation are equal or they are identically zero at $\theta = \pi/2$. We shall see that the latter is true.
 First, we take the derivative of the angular momentum distribution $\partial_{\theta} l$. From Eq.~(7) we can write the angular momentum distribution as $l(r, \theta) = l(r) \sin^{2\gamma} \theta$, so that the derivative reads
-\begin{eqnarray*}
+\begin{eqnarray}
 \partial_{\theta} l = 2\gamma l(r) \sin^{2\gamma - 1} \theta \cos \theta \,.
-\end{eqnarray*}
+\end{eqnarray}
 Taking $\theta = \pi/2$ leads to $\partial_{\theta} l = 0$, so the second term equals to zero.
 To show that the first term is also zero, we write it as
-\begin{eqnarray*}
+\begin{eqnarray}
 \partial_{\theta} \ln|u_t| = \partial_{\theta} \ln \left(\frac{\mathcal{L}}{\mathcal{A}}\right)^{\frac{1}{2}}\,,
-\end{eqnarray*}
+\end{eqnarray}
 where $\mathcal{L} = g_{t \phi}^2 - g_{tt} g_{\phi\phi}$ and $\mathcal{A} = g_{\phi\phi} + 2 l g_{t\phi} + l^2g_{tt}$, and we have dropped the absolute value, as it is irrelevant to this discussion. Then, the derivative is
-\begin{eqnarray*}
+\begin{eqnarray}
 \partial_{\theta} \ln|u_t| = \frac{1}{2} \frac{\mathcal{A}}{\mathcal{L}}\frac{\mathcal{A}\partial_{\theta}{\mathcal{L}} - \mathcal{L}\partial_{\theta}\mathcal{A}}{\mathcal{A}^2} = \frac{1}{2} \frac{\mathcal{A}\partial_{\theta}{\mathcal{L}} - \mathcal{L}\partial_{\theta}\mathcal{A}}{\mathcal{A} \mathcal{L}}\,.
-\end{eqnarray*}
+\end{eqnarray}
 We use Boyer-Lindquist coordinates, for which the metric components read
-\begin{eqnarray*}
+\begin{eqnarray}
 g_{tt} = - \left(1 - \frac{2Mr}{\rho^2}\right), \ g_{t\phi} = -\frac{2Mar\sin^2\theta}{\rho^2}, \ g_{\phi\phi} = \left(r^2 + a^2 + \frac{2Ma^2r\sin^2\theta}{\rho^2}\right) \sin^2 \theta\,,
-\end{eqnarray*}
+\end{eqnarray}
 where $\rho^2 = r^2 + a^2\cos^2 \theta$. Therefore, we obtain $\mathcal{L} = \Delta \sin^2 \theta$, where $\Delta = r^2 - 2Mr + a^2$, and its derivative $\partial_{\theta}\mathcal{L} = 2 \Delta \sin \theta \cos \theta$, which is zero for $\theta = \pi/2$. Next, we take the derivative of $\mathcal{A}$
-\begin{eqnarray*}
+\begin{eqnarray}
 \partial_{\theta} \mathcal{A} = \partial_{\theta} g_{\phi\phi} + 2 (\partial_{\theta} l) g_{t\phi} + 2l\partial_{\theta} g_{t\phi} + 2l(\partial_{\theta} l) g_{tt} + l^2 \partial_{\theta} g_{tt} = \partial_{\theta} g_{\phi\phi} + 2l\partial_{\theta} g_{t\phi} + l^2 \partial_{\theta} g_{tt}\,,
-\end{eqnarray*}
+\end{eqnarray}
 where we have used the previous result that $\partial_{\theta} l=0$ at $\theta = \pi/2$. By inspecting the metric components, it is easy to see that all terms depending on $\theta$ are functions of $\sin^2 \theta$ or $\cos^2 \theta$. This means their $\theta$ derivatives will have at least a $\cos \theta$ multiplying. Then $\partial_{\theta} \mathcal{A} = 0$ at $\theta = \pi/2$. Therefore, $\partial_{\theta} \ln|u_t|$ is also zero at $\theta = \pi/2$.
 
-\section{Magnetization for $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$}\label{app_magmax}
-
-Here, we derive the condition $\beta_{\mathrm{m}_{\mathrm{c}}} = 1/(\lambda - 1)$ for $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$.
-First, we can use equation~\eqref{eq:eos_mag} to write 
-
-\begin{equation}\label{eq_max}
-\frac{\partial{p_{\mathrm{m}}(r)}}{\partial r} = \partial_{r} \left(K_{\mathrm{m}} \mathcal{L}^{\lambda -1} w^{\lambda}\right) = 0,
-\end{equation}
-
-Computing, we arrive at
-
-\begin{equation}
-\partial_{r} p_{\mathrm{m}} = K_{\mathrm{m}} \mathcal{L}^{\lambda - 2}w^{\lambda} [(\lambda - 1)(\partial_r \mathcal{L}) w + \lambda \mathcal{L} (\partial_r w)].
-\end{equation}
-
-We can see that inside the disc $K_{\mathrm{m}} \mathcal{L}^{\lambda - 2}w^{\lambda} \neq 0$, So to fulfill the extremum condition \eqref{eq_max} we need 
-
+\section{Value of the magnetisation parameter for $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$}\label{app_magmax}
+In this appendix we derive the condition $\beta_{\mathrm{m}_{\mathrm{c}}} = 1/(\lambda - 1)$ for $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$.
+First, we can use Eq.~\eqref{eq:eos_mag} to write 
+\begin{eqnarray}\label{eq_max}
+\frac{\partial{p_{\mathrm{m}}(r)}}{\partial r} = \partial_{r} \left(K_{\mathrm{m}} \mathcal{L}^{\lambda -1} w^{\lambda}\right) = 0\,,
+\end{eqnarray}
+which yields
+\begin{eqnarray}
+\partial_{r} p_{\mathrm{m}} = K_{\mathrm{m}} \mathcal{L}^{\lambda - 2}w^{\lambda} [(\lambda - 1)(\partial_r \mathcal{L}) w + \lambda \mathcal{L} (\partial_r w)]=0\,.
+\end{eqnarray}
+Inside the disc $K_{\mathrm{m}} \mathcal{L}^{\lambda - 2}w^{\lambda} \neq 0$. Therefore, to fulfill the extremum condition~\eqref{eq_max} we need 
 \begin{equation}\label{eq:simple_expr}
-(\lambda - 1)(\partial_r \mathcal{L}) w + \lambda \mathcal{L} (\partial_r w) = 0
+(\lambda - 1)(\partial_r \mathcal{L}) w + \lambda \mathcal{L} (\partial_r w) = 0\,.
 \end{equation}
-
-To evaluate this expressión, we need to compute the partial derivatives $\partial_r \mathcal{L}$ and $\partial_r w$. The derivative of $\mathcal{L}$ is esay to compute, as $\mathcal{L} = \Delta \sin^2 \theta$. So its partial derivative is
-
+To evaluate this expression, we need to compute the partial derivatives $\partial_r \mathcal{L}$ and $\partial_r w$. The derivative of $\mathcal{L}$ is straightforward, since $\mathcal{L} = \Delta \sin^2 \theta$,
 \begin{equation}
-\partial_r \mathcal{L} = 2(r-M)\sin^2 \theta
+\partial_r \mathcal{L} = 2(r-M)\sin^2 \theta\,.
 \end{equation}
-
-Now, we take our attention to $\partial_r w$. From eq.~\eqref{eq:enthalpy_eq} we have
-
+Let us now discuss $\partial_r w$. From Eq.~\eqref{eq:enthalpy_eq} we have
 \begin{equation}
-w = \left[-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]^{\frac{1}{\lambda-1}}
+w = \left[-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]^{\frac{1}{\lambda-1}}\,.
 \end{equation}
-
-Then, we can take its derivative
-
+Taking its derivative we obtain
+\begin{eqnarray}
+\partial_r w &=& \frac{w}{\lambda - 1} \left[-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]^{-1} 
+\nonumber \\
+&\times&
+\left[\left(-\partial_r W \left(\frac{\lambda -1 }{\lambda}\right) \frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right) + \left(-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{-(\lambda - 1) K_{\mathrm{m}} \mathcal{L}^{\lambda - 2} \partial_r \mathcal{L}}{(K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1})^2}\right)\right]\,.
+\end{eqnarray}
+Since at $r = r_{\mathrm{c}}$ the derivative of the potential is zero, $\partial_r W(r, \pi/2)|_{r = r_{\mathrm{c}}} = 0$, we can simplify the above expression to obtain
+\begin{eqnarray}
+\partial_r w &=& \frac{w}{\lambda - 1} \left[-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]^{-1} 
+\nonumber \\
+&\times&
+\left(-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right)\left[\frac{-(\lambda - 1) K_{\mathrm{m}} \mathcal{L}^{\lambda - 2} \partial_r \mathcal{L}}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]\,,
+\end{eqnarray}
+which can be further simplified to the following form
 \begin{equation}
-\partial_r w = \frac{w}{\lambda - 1} \left[-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]^{-1} \left[\left(-\partial_r W \left(\frac{\lambda -1 }{\lambda}\right) \frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right) + \left(-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{-(\lambda - 1) K_{\mathrm{m}} \mathcal{L}^{\lambda - 2} \partial_r \mathcal{L}}{(K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1})^2}\right)\right]
+\partial_r w = - w \left[\frac{K_{\mathrm{m}} \mathcal{L}^{\lambda - 2} \partial_r \mathcal{L}}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]\,.
 \end{equation}
-
-Since we are at $r = r_{\mathrm{c}}$ the derivative of the potential is zero ($\partial_r W(r, \pi/2)|_{r = r_{\mathrm{c}}} = 0$), so we can simplify the expression to get
-
+Next, by inserting this expression in Eq.~\eqref{eq:simple_expr} we obtain
 \begin{equation}
-\partial_r w = \frac{w}{\lambda - 1} \left[-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]^{-1} \left(-\Delta W \left(\frac{\lambda -1}{\lambda}\right)\frac{1}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right)\left[\frac{-(\lambda - 1) K_{\mathrm{m}} \mathcal{L}^{\lambda - 2} \partial_r \mathcal{L}}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]
+(\partial_r \mathcal{L}) w [(\lambda -1)(K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}) - \lambda K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}] = 0\,.
 \end{equation}
-
-And we can further simplify this, to arrive at
-
+Since $(\partial_r \mathcal{L}) w \neq 0$ inside the disc, the above equation leads to 
 \begin{equation}
-\partial_r w = - w \left[\frac{K_{\mathrm{m}} \mathcal{L}^{\lambda - 2} \partial_r \mathcal{L}}{K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}}\right]
+K (\lambda - 1) = K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}\,.
 \end{equation}
-
-Then, we can insert this expression at eq.~\eqref{eq:simple_expr} to obtain
-
+Moreover, we can use Eqs.~\eqref{eq:eos_fluid}, \eqref{eq:eos_mag} and \eqref{eq:beta_eq} at the center (remember that $w_{\mathrm{c}} = 1$) to write $K$ as $K = \beta_{\mathrm{m}_{\mathrm{c}}} K_\mathrm{m}\mathcal{L}^{\lambda -1}$. Therefore, this allows us to obtain the following simple expression for the value of the magnetisation parameter at the center of the disc
 \begin{equation}
-(\partial_r \mathcal{L}) w [(\lambda -1)(K+K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}) - \lambda K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}] = 0
-\end{equation}
-
-As $(\partial_r \mathcal{L}) w \neq 0$ inside the disc, we can simplify this, to arrive at 
-
-\begin{equation}
-K (\lambda - 1) = K_{\mathrm{m}}\mathcal{L}^{\lambda - 1}
-\end{equation}
-
-The, we can use equations \eqref{eq:eos_fluid}, \eqref{eq:eos_mag} and \eqref{eq:beta_eq} at the center (remember that $w_{\mathrm{c}} = 1$) to write $K$ as $K = \beta_{\mathrm{m}_{\mathrm{c}}} K_\mathrm{m}\mathcal{L}^{\lambda -1}$. This allows us to write the simple expression
-
-\begin{equation}
-\beta_{\mathrm{m}_{\mathrm{c}}} = \frac{1}{\lambda - 1}
+\beta_{\mathrm{m}_{\mathrm{c}}} = \frac{1}{\lambda - 1}\,.
 \end{equation}
 
 \sg{We should add a short discussion of the generality of this result.}
