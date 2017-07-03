@@ -209,8 +209,31 @@ enthalpy used in (13). A comment should be added.
 
 \bigskip
 
-{\bf A:} We address this issue below where the referee comments on the ``assumption of the specific
-internal energy", since we believe both queries are related.
+{\bf A:} In our work we are following the same procedure as in Komissarov (2006), where no comment on the treatment
+of the specific internal energy is explicitly provided. We have simply followed the same approach and have used the
+same polytropic relationship between the enthalpy and the fluid pressure, Eq.~(12), and between the rest-mass density and the
+fluid pressure (as can be read in the paragraph following Eq.~(27)). Thanks to the remark of the referee we now realise 
+that by doing this we (and Komissarov) are making an implicit assumption about the internal energy. By looking at the 
+expression of the stress-energy tensor in Eq.~(9) of the manuscript, we see that the fluid enthalpy $w$ includes the 
+rest-mass density $\rho$, and can thus be defined as $w=\rho h$ where $h$ is the specific enthalpy. The relativistic definition 
+of this quantity (in units with $c=1$) is $h=1+\varepsilon+p/\rho$, where $\varepsilon$ is the specific internal energy and 
+$p$ is the fluid pressure. From a thermodynamical point of view a fluid is non-relativistic in the limit $h=1$. Therefore,
+since both equations of state we use are polytropes (relating $p$ with $w$ or with $\rho$ in the same functional form) we 
+conclude that we are implictly assuming that $h=1$ in our models, i.e.~the disks we build in our procedure are non-relativistic 
+from a thermodynamical point of view.
+
+\bigskip 
+
+We have included the following comment at the end of the paragraph following Eq.~(27): 
+``We notae that the fluid enthalpy $w$ includes the rest-mass density $\rho$, and can thus be defined as $w=\rho h$ where
+$h$ is the specific enthalpy. The relativistic definition of this quantity is $h=1+\varepsilon+p/\rho$, where $\varepsilon$ is
+the specific internal energy. From a thermodynamical point of view a non-relativistic fluid satisfies $h=1$. Therefore,
+since we use poytropic equations of state (relating $p$ with either $w$ or $\rho$ in the same functional form) we are
+implictly assuming that $h=1$, i.e.~the discs we build in our procedure are non-relativistic from a thermodynamical point of view."
+
+\bigskip
+
+To avoid confusion, we have changed the name of variable used for the step of the Simpson's rule from $h$ to $\Delta r$.
 
 \bigskip
 
@@ -222,7 +245,11 @@ comment should be added.
 
 \bigskip
 
-{\bf A:} 
+{\bf A:} We have not included further details about the prescription of the magnetic field because, in practice, in our procedure we 
+only need to use $p_m\equiv b^2/2$,
+and not the individual components of the magnetic-field themselves. We believe that including those extra details in the manuscript does not
+provide relevant information. If interested, the referee is addressed to appendix A of Komissarov 
+(2006) for the derivation of the explicit relations (which we do not employ anyway).
 
 \bigskip
 
@@ -234,7 +261,11 @@ should be added.
 
 \bigskip
 
-{\bf A:} 
+{\bf A:} They do not coincide, as can be inferred from Eqs.~(12) and (14). Also notice that the values of $r_{\rm max}$ and $r_{\rm m,max}$ reported in the tables, do not coincide, which shows that fluid isobaric surfaces and magnetic isobaric surfaces cannot coincide. On the other hand, the iso-density surfaces and the fluid isobaric surfaces do coincide, since both variables are related by the barotropic equation of state.
+
+\bigskip
+
+We have included the following text at the end of the first paragraph of the results section: ``We note in particular that the radii of the maximum fluid pressure and magnetic pressure, $r_{{\rm{max}}}$ and $r_{{\mathrm{m, max}}}$, respectively, for the same value of $\beta_{\mathrm{m}_{\mathrm{c}}}$, never coincide. This also reflects the fact that constant fluid pressure surfaces do not coincide with constant magnetic pressure surfaces."
 
 \bigskip
 
@@ -271,16 +302,18 @@ clearly how they actually obtain the density from Eqs. (12) and (14).
 \bigskip
 
 {\bf A:} 
-The specific internal energy $\varepsilon$ is obtained by combining the ideal fluid (gamma-law)
-equation of state which, in the notation used in the paper we write $P=(\kappa-1)\rho\varepsilon$,
-and the barotropic equation of state. Solving for $\varepsilon$ we obtain
-\begin{eqnarray*}
-\varepsilon=\frac{K}{\kappa-1}\rho^{\kappa-1}\,.
-\end{eqnarray*}
-We have incorporated the following statements at the end of the paragraph after Eq.~(27):
-``We note that the specific internal energy $\varepsilon$ is needed to compute the enthalpy. We obtain
-this quantity by combining the ideal fluid and the barotropic equations of state, which yields 
-$\varepsilon=\frac{K}{\kappa-1}\rho^{\kappa-1}$."
+We have addressed this issue previously, while responding to a related query raised by the referee.
+
+%The specific internal energy $\varepsilon$ is obtained by combining the ideal fluid (gamma-law)
+%equation of state which, in the notation used in the paper we write $P=(\kappa-1)\rho\varepsilon$,
+%and the barotropic equation of state. Solving for $\varepsilon$ we obtain
+%\begin{eqnarray*}
+%\varepsilon=\frac{K}{\kappa-1}\rho^{\kappa-1}\,.
+%\end{eqnarray*}
+%We have incorporated the following statements at the end of the paragraph after Eq.~(27):
+%``We note that the specific internal energy $\varepsilon$ is needed to compute the enthalpy. We obtain
+%this quantity by combining the ideal fluid and the barotropic equations of state, which yields 
+%$\varepsilon=\frac{K}{\kappa-1}\rho^{\kappa-1}$."
 
 
 \bigskip
@@ -380,7 +413,8 @@ a solution still be found?
 
 \bigskip
 
-{\bf A:} 
+{\bf A:} We have built models with very small values of $\beta_{m_c}$, such as  $\beta_{m_c} = 10^{-20}$ (extremely high magnetisation) without encountering numerical difficulties. In practice we have found that there are no qualitative differences in the structure of the discs once $\beta_{m_c}$ becomes smaller than a sufficiently small value, about $\beta_{m_c}=10^{-3}$. This is
+the reason why we choose that particular value as our lower limit in the figures and tables of the manuscript. 
 
 \bigskip
 
