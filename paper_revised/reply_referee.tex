@@ -199,7 +199,7 @@ define it
 
 {\bf A:} We have included the following definition: ``The cusp is defined as the circle 
 in the equatorial plane on which the pressure gradient vanishes and the angular 
-momentum of the disk equals the Keplerian angular momentum." 
+momentum of the disc equals the Keplerian angular momentum." 
 
 \bigskip
 
@@ -210,7 +210,7 @@ enthalpy used in (13). A comment should be added.
 \bigskip
 
 {\bf A:} In our work we are following the same procedure as in Komissarov (2006), where no comment on the treatment
-of the specific internal energy is explicitly provided. We have simply followed the same approach and have used the
+of the specific internal energy is explicitly provided. Since we have been guided by this previous result, we have used the
 same polytropic relationship between the enthalpy and the fluid pressure, Eq.~(12), and between the rest-mass density and the
 fluid pressure (as can be read in the paragraph following Eq.~(27)). Thanks to the remark of the referee we now realise 
 that by doing this we (and Komissarov) are making an implicit assumption about the internal energy. By looking at the 
@@ -225,7 +225,7 @@ from a thermodynamical point of view.
 \bigskip 
 
 We have included the following comment at the end of the paragraph following Eq.~(27): 
-``We notae that the fluid enthalpy $w$ includes the rest-mass density $\rho$, and can thus be defined as $w=\rho h$ where
+``We note that the fluid enthalpy $w$ includes the rest-mass density $\rho$, and can thus be defined as $w=\rho h$ where
 $h$ is the specific enthalpy. The relativistic definition of this quantity is $h=1+\varepsilon+p/\rho$, where $\varepsilon$ is
 the specific internal energy. From a thermodynamical point of view a non-relativistic fluid satisfies $h=1$. Therefore,
 since we use poytropic equations of state (relating $p$ with either $w$ or $\rho$ in the same functional form) we are
@@ -372,7 +372,7 @@ We have incorporated this simple demonstration as Appendix A in the manuscript.
 
 \bigskip
 
-We have also incorporated a second appendix in the manuscript, Appendix B, to explain why indeed, as shown in the inset of the right panel of Fig.~6, all models cross at $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$ for a very specific value of $\beta_{\mathrm{m}_{\mathrm{c}}}$. Correspondingly, we have added the following text towards the end of Section 4: ``{\bf It must be noted that the location of the maximum of the magnetic pressure is identical for all models considered when $\beta_{\mathrm{m}_{\mathrm{c}}} \equiv 1/(\lambda - 1) = 3$, as we show in Appendix~B. At this value of $\beta_{\mathrm{m}_{\mathrm{c}}}$ all models cross at $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$, as it is more clearly shown in the inset of the right panel of Fig.~6.}"
+We have also incorporated a second appendix in the manuscript, Appendix B, to explain why indeed, as shown in the inset of the right panel of Fig.~6, all models cross at $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$ for a very specific value of $\beta_{\mathrm{m}_{\mathrm{c}}}$. Correspondingly, we have added the following text towards the end of Section 4: ``{It must be noted that the location of the maximum of the magnetic pressure is identical for all models considered when $\beta_{\mathrm{m}_{\mathrm{c}}} \equiv 1/(\lambda - 1) = 3$, as we show in Appendix~B. At this value of $\beta_{\mathrm{m}_{\mathrm{c}}}$ all models cross at $r_{\mathrm{m}_{\mathrm{max}}} = r_{\mathrm{c}}$, as it is more clearly shown in the inset of the right panel of Fig.~6.}"
 
 \bigskip
 
@@ -418,7 +418,7 @@ the reason why we choose that particular value as our lower limit in the figures
 
 \bigskip
 
-{\bf R:} - Sec. 4: I find the discussion in this section the less clear; a lot
+{\bf R:} - Sec.~4: I find the discussion in this section the less clear; a lot
 of the considerations appear phenomenological but I can't find the
 simple back-of-the-envelope demonstration that what the authors observe
 numerically is what should be expected on physical grounds. For
@@ -431,7 +431,45 @@ intuitive explanations first.
 
 \bigskip
 
-{\bf A:}
+{\bf A:} We appreciate the comment of the referee and apologize if the discussion is Section 4 is not sufficiently clear. We have been
+analyzing in more detail our findings and have come up with the following simple explanations for our numerical observations.
+
+\bigskip
+
+To explain the movement of the maximum of the rest-mass density towards smaller $r$ we can start by computing the radial derivative of the enthaply, which should vanish at $r=r_{\rm max}$. From Eq.~(20) we have
+\begin{eqnarray*}
+\partial_r w=\partial_r\left[
+-\Delta W \left( \frac{\lambda-1}{\lambda}\right)\frac{1}{K+K_m \mathcal{L}^{\lambda-1}}
+\right]^{\frac{1}{\lambda-1}}\,,
+\end{eqnarray*}
+where we have used $\kappa=\lambda$ and have defined $\Delta W\equiv W-W_{\rm in}$. After some algebra, we arrive at the following expression for the radial derivative of the potential:
+\begin{eqnarray*}
+\partial_r W(r)|_{r=r_{\rm max}}=\frac{(\lambda-1) \Delta W(r_{\rm max})}{\mathcal{L}(r_{\rm max})}
+\left[
+\frac{(\partial_r \mathcal{L})|_{r=r_{\rm max}}}{1+\beta_{{\rm m}_{\rm c}}\left(\frac{\mathcal{L}(r_c)}{\mathcal{L}(r_{\rm max})} \right)^{\lambda-1}}
+\right]\,.
+\end{eqnarray*}
+All the factors on the r.h.s.~of this expression are positive, except for $\Delta W(r_{\rm max})$ which is negative. For $\beta_{{\rm m}_{\rm c}}\rightarrow \infty$,  $\partial_r W(r)|_{r=r_{\rm max}}=0$, which is attained at $r_{\rm max}=r_c$, which is a minimum of the potential.
+As $\beta_{{\rm m}_{\rm c}}$ decreases (and hence the magnetisation increases) the r.h.s.~increases in absolute value being always negative. Therefore, the position of $r_{\rm max}$ has to move towards smaller radii.
+
+\bigskip
+
+On the other hand, to explain the increase of $\rho_{\mathrm{max}}$ with magnetisation we can start with the same equation for the enthalpy $w$ as before (in our classical thermodynamical limit $w=\rho$). Next, we take $K=p_c$ and $K_m=\frac{p_c}{\beta_{{\rm m}_{\rm c}} \mathcal{L}_{c}^{\lambda-1}}$, where subindex $c$ means that the corresponding expressions are evaluated at the centre of the disc. We also use Eq.~(25) to write
+\begin{eqnarray*}
+p_c=-\Delta W_c \left( \frac{\lambda-1}{\lambda} \right) \left(  \frac{\beta_{{\rm m}_{\rm c}}}{1+\beta_{{\rm m}_{\rm c}}} \right)\,.
+\end{eqnarray*}
+Substituting these expressions in the equation for the enthalpy we obtain:
+\begin{eqnarray*}
+w|_{r=r_{\rm max}}= \left[
+\frac{\Delta W(r_{\rm max})}{\Delta W(r_{\rm c})}\left(
+\frac{1+\beta_{{\rm m}_{\rm c}}}{\left( \frac{\mathcal{L}(r_{\rm max})}{\mathcal{L}(r_c)}   \right)^{\lambda-1}+\beta_{{\rm m}_{\rm c}}}
+\right)
+\right]^{\frac{1}{\lambda-1}}\,.
+\end{eqnarray*}
+We note that $\frac{\mathcal{L}(r_{\rm max})}{\mathcal{L}(r_c)}\le 1$ and therefore the factor in parenthesis on the r.h.s.~is always $\ge 1$. Despite $\frac{\Delta W(r_{\rm max})}{\Delta W(r_{\rm c})}\le 1$ our numerical models are such that the product of the two factors on the r.h.s.~is always $\ge 1$. Therefore, the value of the rest-mass density at the maximum, $\rho_{\rm max}$, increases with magnetisation.
+
+\bigskip
+If the referee considered these explanations satisfactory and would like to have them included in the manuscript, we would be happy to do so.
 
 \bigskip
 
