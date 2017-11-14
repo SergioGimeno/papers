@@ -1,0 +1,69 @@
+Referee Report
+
+
+The authors have followed carefully all of the suggestions made and I am
+pleased to see that they were able to provide more rigorous support to
+some of the arguments presented in the paper. The new appendices A and B
+present valuable additions to the paper.
+
+In view of these considerations I am glad to recommend the publication of
+the manuscript as a regular paper on A&A. At the same time, I'd like the
+authors to consider some of the small suggestions listed below and
+addressing some of the questions raised.
+
+
+## A. ...We have included the following comment at the end of the paragraph
+## following Eq. (27): "We note that the fluid enthalpy w includes the
+## rest-mass density rhos, and can thus be defined as w = rho h where h
+## is the specific enthalpy. The relativistic definition of this quantity
+## is h = 1+epsilon+p/rho, where epsilon is the specific internal
+## energy. From a thermodynamical point of view a non-relativistic fluid
+## satisfies h = 1. Therefore, since we use poytropic equations of state
+## (relating p with either w or rho in the same functional form) we are
+## implictly assuming that h = 1, i.e. the discs we build in our
+## procedure are non-relativistic from a thermodynamical point of view."
+
+The authors should note that "w" is the *enthalpy density* and not the
+enthalpy. This becomes clear: any "specific" quantity becomes a
+"density" when multiplied by a rest-mass density.
+
+
+## A: The reason we show the middle panel in logarithm scale and the
+## right panel in linear scale is because this is the choice in
+## Komissarov (2006). We have followed the same choice in order to
+## facilitate the qualitative and quantitative comparison for this
+## constant angular momentum test. If the referee concurred, we would
+## prefer to keep the right panel in linear scale. If not, we would not
+## mind changing the right panel to logarithmic scale.
+
+Following too closely the work of Komissarov is not necessary and not
+necessarily a good idea. Rather, I think that a plot in logarithmic
+scale would be more informative.
+
+
+## A: We have built models with very small values of beta_mc, such as
+## beta_mc = 1e-20 (extremely high magnetisation) without encountering
+## numerical difficulties. In practice we have found that there are no
+## qualitative differences in the structure of the discs once beta_mc
+## becomes smaller than a sufficiently small value...
+
+It is important to incorporate this comment in the revised version.
+
+
+## R: - Fig. 2: all of the panels would benefit from a legend showing the
+## corresponding values of gamma and beta. This would avoid having to read
+## the caption repeatedly. The same is true also for Fig. 3.
+##
+## A: Done.
+
+I think that the legend should also report the value of the
+black-hole's spin as this makes the various panels readable also
+without having to consult the caption.
+
+
+## If the referee considered these explanations satisfactory and would
+## like to have them included in the manuscript, we would be happy to do
+## so.
+
+I find the explanation satisfactory and, as mentioned above, I find
+Appendix B a nice addition to the paper.

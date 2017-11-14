@@ -1,0 +1,81 @@
+\begin{thebibliography}{20}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abramowicz} {et~al.}(1978){Abramowicz}, {Jaroszynski}, \&
+  {Sikora}}]{Abramowicz:1978}
+{Abramowicz}, M., {Jaroszynski}, M., \& {Sikora}, M. 1978, \aap, 63, 221
+
+\bibitem[{{Abramowicz} \& {Fragile}(2013)}]{Abramowicz:2013}
+{Abramowicz}, M.~A. \& {Fragile}, P.~C. 2013, Living Reviews in Relativity, 16,
+  1
+
+\bibitem[{Baiotti \& Rezzolla(2017)}]{Baiotti:2017}
+Baiotti, L. \& Rezzolla, L. 2017, Reports on Progress in Physics
+  [\eprint[arXiv]{1607.03540}]
+
+\bibitem[{{Faber} \& {Rasio}(2012)}]{Faber:2012}
+{Faber}, J.~A. \& {Rasio}, F.~A. 2012, Living Reviews in Relativity, 15, 8
+
+\bibitem[{{Font} \& {Daigne}(2002)}]{Font:2002}
+{Font}, J.~A. \& {Daigne}, F. 2002, \mnras, 334, 383
+
+\bibitem[{{Fragile} \& {S{\c a}dowski}(2017)}]{Fragile:2017}
+{Fragile}, P.~C. \& {S{\c a}dowski}, A. 2017, \mnras, 467, 1838
+
+\bibitem[{{Herdeiro} {et~al.}(2016){Herdeiro}, {Radu}, \&
+  {R{\'u}narsson}}]{Herdeiro:2016}
+{Herdeiro}, C., {Radu}, E., \& {R{\'u}narsson}, H. 2016, Classical and Quantum
+  Gravity, 33, 154001
+
+\bibitem[{{Herdeiro} \& {Radu}(2014)}]{Herdeiro:2014}
+{Herdeiro}, C.~A.~R. \& {Radu}, E. 2014, Physical Review Letters, 112, 221101
+
+\bibitem[{{Jaroszynski} {et~al.}(1980){Jaroszynski}, {Abramowicz}, \&
+  {Paczynski}}]{Jaroszynski:1980}
+{Jaroszynski}, M., {Abramowicz}, M.~A., \& {Paczynski}, B. 1980, \actaa, 30, 1
+
+\bibitem[{{Komissarov}(2006)}]{Komissarov:2006}
+{Komissarov}, S.~S. 2006, \mnras, 368, 993
+
+\bibitem[{{Kozlowski} {et~al.}(1978){Kozlowski}, {Jaroszynski}, \&
+  {Abramowicz}}]{Kozlowski:1978}
+{Kozlowski}, M., {Jaroszynski}, M., \& {Abramowicz}, M.~A. 1978, \aap, 63, 209
+
+\bibitem[{{Montero} {et~al.}(2007){Montero}, {Zanotti}, {Font}, \&
+  {Rezzolla}}]{Montero:2007}
+{Montero}, P.~J., {Zanotti}, O., {Font}, J.~A., \& {Rezzolla}, L. 2007, \mnras,
+  378, 1101
+
+\bibitem[{{Qian} {et~al.}(2009){Qian}, {Abramowicz}, {Fragile}, {Hor{\'a}k},
+  {Machida}, \& {Straub}}]{Qian:2009}
+{Qian}, L., {Abramowicz}, M.~A., {Fragile}, P.~C., {et~al.} 2009, \aap, 498,
+  471
+
+\bibitem[{{Rezzolla} {et~al.}(2010){Rezzolla}, {Baiotti}, {Giacomazzo}, {Link},
+  \& {Font}}]{Rezzolla:2010}
+{Rezzolla}, L., {Baiotti}, L., {Giacomazzo}, B., {Link}, D., \& {Font}, J.~A.
+  2010, Classical and Quantum Gravity, 27, 114105
+
+\bibitem[{{Sekiguchi} \& {Shibata}(2011)}]{Sekiguchi:2011}
+{Sekiguchi}, Y. \& {Shibata}, M. 2011, \apj, 737, 6
+
+\bibitem[{{Shibata} \& {Taniguchi}(2011)}]{Shibata:2011}
+{Shibata}, M. \& {Taniguchi}, K. 2011, Living Reviews in Relativity, 14, 6
+
+\bibitem[{{Stergioulas}(2011)}]{Stergioulas:2011}
+{Stergioulas}, N. 2011, in Journal of Physics Conference Series, Vol. 283,
+  012036
+
+\bibitem[{{von Zeipel}(1924)}]{vonZeipel:1924}
+{von Zeipel}, H. 1924, \mnras, 84, 665
+
+\bibitem[{{Wielgus} {et~al.}(2015){Wielgus}, {Fragile}, {Wang}, \&
+  {Wilson}}]{Wielgus:2015}
+{Wielgus}, M., {Fragile}, P.~C., {Wang}, Z., \& {Wilson}, J. 2015, \mnras, 447,
+  3593
+
+\bibitem[{{Zanotti} \& {Pugliese}(2015)}]{Zanotti:2015}
+{Zanotti}, O. \& {Pugliese}, D. 2015, General Relativity and Gravitation, 47,
+  44
+
+\end{thebibliography}
