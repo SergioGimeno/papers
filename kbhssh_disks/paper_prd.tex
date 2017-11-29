@@ -7,8 +7,7 @@
 %
 %-----------------------------------------------------------------------
 
-\documentclass[aps, prl, amsmath, floats,floatfix, twocolumn, superscriptaddress, nofootinbib, 
-showpacs]{revtex4}
+\documentclass[twocolumn,aps,showpacs,showkeys,prd,superscriptaddress,byrevtex, amsmath]{revtex4-1}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -26,6 +25,8 @@ showpacs]{revtex4}
 \usepackage{graphicx,subfigure}
 \usepackage{units}
 \usepackage{slashbox}
+\usepackage{aas_macros}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -125,7 +126,7 @@ We present a method to build magnetized constant angular momentum disks around K
 %%%   RESULTS   %%%
 %%%%%%%%%%%%%%%%%%%%%
 
-We use the stationary and axisymmetric metric ansatz provided by\citet{Herdeiro:2014a}
+We use the stationary and axisymmetric metric ansatz provided by\cite{Herdeiro:2014a}
 
 \begin{equation}
 \mathrm{d}s^2 = e^{2F_1}\left(\frac{\mathrm{d}r^2}{N} + r^2\mathrm{d}\theta^2\right) + e^{2F_2}r^2\sin^2 \theta(\mathrm{d}\phi-W\mathrm{d}t)^2-e^{2F_0}N\mathrm{d}t^2,
@@ -286,7 +287,7 @@ This expression is given by~\citep{Daigne:2004} for Kerr BHs, but it is valid fo
 
 
 \subsection{Magnetized disks}
-We use the procedure described by~\citet{Montero:2007}, where we write the equations of ideal general relativistic MHD are the following conservation laws, $\nabla_{\mu} T^{\mu\nu} = 0$, $\nabla_{\mu} \,^\ast F^{\mu\nu} = 0$, and 
+We use the procedure described by~\cite{Montero:2007}, where we write the equations of ideal general relativistic MHD are the following conservation laws, $\nabla_{\mu} T^{\mu\nu} = 0$, $\nabla_{\mu} \,^\ast F^{\mu\nu} = 0$, and 
 $\nabla_{\mu} (\rho u^{\mu}) = 0$, 
 where $\nabla_{\mu}$ is the covariant derivative and
 \begin{equation}\label{eq:e-m_tensor}
@@ -328,7 +329,7 @@ where $W_{\mathrm{in}}$ is the potential at the inner edfe of the disk.
 
 In this work, we use $q = \Gamma = 4/3$, the density at the disk centre $\rho_{\mathrm{c}} = 1$ and the angular momentum distribution gives us $W_{\mathrm{in}} = 0$. With this information we can compute all the relevant physical quantities.
 
-It is relevant to note that we could have used the framework described by~\citet{Komissarov:2006}. As we will show in appendix~\ref{komissarov_appendix}, we do not take this approach because it is not appropriate for some cases of KBHsSH.
+It is relevant to note that we could have used the framework described by~\cite{Komissarov:2006}. As we will show in appendix~\ref{komissarov_appendix}, we do not take this approach because it is not appropriate for some cases of KBHsSH.
 
 %--------------------------------------------------------------------
 \section{Method}
@@ -367,13 +368,12 @@ Our results show significant differences between KBHsSH and their counterpart KB
 
 \end{acknowledgements}
 
-\bibliographystyle{apsrev}
-\bibliography{references}
+\bibliography{references.bib}
 
 \begin{appendix}
 \section{KBHsSH vs $h = 1$ approximation}\label{komissarov_appendix}
 
-In the figures \ref{comparison_alt_mag_1}, \ref{comparison_alt_mag_2}, \ref{comparison_alt_mag_3}, \ref{comparison_alt_radial_1}, \ref{comparison_alt_radial_2}, \ref{comparison_alt_radial_3} we show the comparison between the results for KBHsSH using \citet{Montero:2007} and \citet{Komissarov:2006}. The figures show good agreement for the highly magnetized case ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$) but not quite for the non-magnetized and mildly magnetized cases, especially for the model III. This is due to the $h = 1$ approximation breaking down. In the table~\ref{table:pot} we show the correlation between the value of the potential at the centre and the specific enthalpy at the centre. It is easy to note that for higher absolute values of $W_{\mathrm{c}}$ we get values of $h_{\mathrm{c}}$ further away from the case $h = 1$. This is interesting because these high values of $W_{\mathrm{c}}$ (particularly the one for the model III) is unattaniable for any KBH (as is shown by~\citet{Abramowicz:1978}, the maximum value of $W_{\mathrm{c}}$ for a KBH is $W_{\mathrm{c}} = 0.549$).
+In the figures \ref{comparison_alt_mag_1}, \ref{comparison_alt_mag_2}, \ref{comparison_alt_mag_3}, \ref{comparison_alt_radial_1}, \ref{comparison_alt_radial_2}, \ref{comparison_alt_radial_3} we show the comparison between the results for KBHsSH using \cite{Montero:2007} and \cite{Komissarov:2006}. The figures show good agreement for the highly magnetized case ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$) but not quite for the non-magnetized and mildly magnetized cases, especially for the model III. This is due to the $h = 1$ approximation breaking down. In the table~\ref{table:pot} we show the correlation between the value of the potential at the centre and the specific enthalpy at the centre. It is easy to note that for higher absolute values of $W_{\mathrm{c}}$ we get values of $h_{\mathrm{c}}$ further away from the case $h = 1$. This is interesting because these high values of $W_{\mathrm{c}}$ (particularly the one for the model III) is unattaniable for any KBH (as is shown by~\cite{Abramowicz:1978}, the maximum value of $W_{\mathrm{c}}$ for a KBH is $W_{\mathrm{c}} = 0.549$).
 
 \begin{table}
 \caption{Potential at the center $W_{\mathrm{c}}$ and specific enthalpy at the center $h_{\mathrm{c}}$ for the non-magnetized case for the three models.}             
@@ -407,7 +407,7 @@ In the figures \ref{comparison_alt_mag_1}, \ref{comparison_alt_mag_2}, \ref{comp
 \hspace{-0.3cm}
 \includegraphics[scale=0.2]{figures/fig2_III_K__3.pdf}
 \hspace{-0.2cm}
-\caption{Rest-mass density distribution for the model I. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\citet{Montero:2007} and the right column correspond to the~\citet{Komissarov:2006} approximation.}
+\caption{Rest-mass density distribution for the model I. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\cite{Montero:2007} and the right column correspond to the~\cite{Komissarov:2006} approximation.}
 \label{comparison_alt_mag_1}
 \end{figure*}
 
@@ -427,7 +427,7 @@ In the figures \ref{comparison_alt_mag_1}, \ref{comparison_alt_mag_2}, \ref{comp
 \hspace{-0.3cm}
 \includegraphics[scale=0.2]{figures/fig3_IV_K__3.pdf}
 \hspace{-0.2cm}
-\caption{Rest-mass density distribution for the model II. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\citet{Montero:2007} and the right column correspond to the~\citet{Komissarov:2006} approximation.}
+\caption{Rest-mass density distribution for the model II. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\cite{Montero:2007} and the right column correspond to the~\cite{Komissarov:2006} approximation.}
 \label{comparison_alt_mag_2}
 \end{figure*}
 
@@ -447,7 +447,7 @@ In the figures \ref{comparison_alt_mag_1}, \ref{comparison_alt_mag_2}, \ref{comp
 \hspace{-0.3cm}
 \includegraphics[scale=0.2]{figures/fig4_V_K__3.pdf}
 \hspace{-0.2cm}
-\caption{Rest-mass density distribution for the model III. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\citet{Montero:2007} and the right column correspond to the~\citet{Komissarov:2006} approximation.}
+\caption{Rest-mass density distribution for the model III. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\cite{Montero:2007} and the right column correspond to the~\cite{Komissarov:2006} approximation.}
 \label{comparison_alt_mag_3}
 \end{figure*}
 
@@ -467,7 +467,7 @@ In the figures \ref{comparison_alt_mag_1}, \ref{comparison_alt_mag_2}, \ref{comp
 \hspace{-0.3cm}
 \includegraphics[scale=0.3]{figures/radial_III_K__3.pdf}
 \hspace{-0.2cm}
-\caption{Radial rest-mass density distribution for the model I at the equatorial plane. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\citet{Montero:2007} and the right column correspond to the~\citet{Komissarov:2006} approximation.}
+\caption{Radial rest-mass density distribution for the model I at the equatorial plane. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\cite{Montero:2007} and the right column correspond to the~\cite{Komissarov:2006} approximation.}
 \label{comparison_alt_radial_1}
 \end{figure*}
 
@@ -487,7 +487,7 @@ In the figures \ref{comparison_alt_mag_1}, \ref{comparison_alt_mag_2}, \ref{comp
 \hspace{-0.3cm}
 \includegraphics[scale=0.3]{figures/radial_IV_K__3.pdf}
 \hspace{-0.2cm}
-\caption{Radial rest-mass density distribution for the model II at the equatorial plane. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\citet{Montero:2007} and the right column correspond to the~\citet{Komissarov:2006} approximation.}
+\caption{Radial rest-mass density distribution for the model II at the equatorial plane. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\cite{Montero:2007} and the right column correspond to the~\cite{Komissarov:2006} approximation.}
 \label{comparison_alt_radial_2}
 \end{figure*}
 
@@ -507,7 +507,7 @@ In the figures \ref{comparison_alt_mag_1}, \ref{comparison_alt_mag_2}, \ref{comp
 \hspace{-0.3cm}
 \includegraphics[scale=0.3]{figures/radial_V_K__3.pdf}
 \hspace{-0.2cm}
-\caption{Radial rest-mass density distribution for the model III at the equatorial plane. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\citet{Montero:2007} and the right column correspond to the~\citet{Komissarov:2006} approximation.}
+\caption{Radial rest-mass density distribution for the model III at the equatorial plane. From top to bottom the rows correspond to the different values of the magnetization parameter, namely non-magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{3}$), mildly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 1$) and strongly magnetized ($\beta_{\mathrm{m}_{\mathrm{c}}} = 10^{-3}$). The left column correspond to the KBHsSH model using~\cite{Montero:2007} and the right column correspond to the~\cite{Komissarov:2006} approximation.}
 \label{comparison_alt_radial_3}
 \end{figure*}
 \end{appendix}      
